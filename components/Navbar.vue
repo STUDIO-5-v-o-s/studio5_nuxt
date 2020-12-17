@@ -8,7 +8,7 @@
 
     <b-collapse id="nav-collapse" is-nav>
       <!-- Right aligned nav items -->
-      <b-navbar-nav class="ml-auto">
+      <b-navbar-nav class="ml-auto navbar__links">
         <b-nav-item href="#">
           Link
         </b-nav-item>
@@ -37,6 +37,15 @@ export default {
     width: 10rem;
   }
 
+  &__links {
+    @include media-breakpoint-down(sm) {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      background: $light;
+      border-radius: 1rem;
+    }
+  }
+
   .navbar-nav .nav-link {
     color: #fff !important;
     font-size: .9rem !important;
@@ -45,29 +54,34 @@ export default {
     &:hover {
       padding-left: 1rem;
       padding-right: 1rem;
-      background: #ffffff10;
+      background: $light;
       border-radius: .5rem;
       color: $primary !important;
     }
   }
 
-  .navbar-dark .navbar-toggler {
-    color: #fff !important;
+  ::v-deep .navbar-toggler {
+    padding: 1rem 1.25rem;
+    background: $light;
     border: none;
-  }
+    border-radius: .5rem;
 
-  .navbar-toggler-icon {
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    vertical-align: middle;
-    color: #fff !important;
-    background-size: 100% 100%;
-  }
+    &:focus,
+    &:hover {
+      border: none;
+      text-decoration: none;
+    }
 
-  ::v-deep .navbar-toggler > .navbar-toggler-icon {
-    width: 1.25rem;
-    background-image: url('~assets/images/icons/burger.svg');
+    &-icon {
+      display: inline-block;
+      width: 1.25rem;
+      background-image: url('~assets/images/icons/burger.svg');
+      vertical-align: middle;
+
+      &:active {
+        background-image: url('~assets/images/icons/burger_pink.svg');
+      }
+    }
   }
 }
 </style>
