@@ -6,11 +6,10 @@
 </template>
 
 <script>
-import Header from '@/components/Header'
 
 export default {
   components: {
-    Header
+    Header: () => import('@/components/Header')
   }
 }
 </script>
