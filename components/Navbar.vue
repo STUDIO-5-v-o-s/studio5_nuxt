@@ -1,7 +1,7 @@
 <template>
   <b-navbar toggleable="lg" class="navbar">
     <b-navbar-brand href="#">
-      <Logo class="navbar__logo" />
+      <LogoAlternative class="navbar__logo" />
     </b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse" />
@@ -79,7 +79,7 @@ export default {
       vertical-align: middle;
 
       &:active {
-        background-image: url('~assets/images/icons/burger_pink.svg');
+        background-image: url('~assets/images/icons/primary/burger.svg');
       }
     }
   }

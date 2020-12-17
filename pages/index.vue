@@ -6,10 +6,13 @@
     <p>
       {{ data.header.desc }}
     </p>
-
-    <CaseStudie />
-
-    <CaseStudieApi />
+    <CustomButton title="Button" href="" primary />
+    <br><br>
+    <CustomButton title="Button" href="" wide secondary />
+    <CustomIcon name="add-file" />
+    <CustomIcon name="add-file" width="64" />
+    <CustomIcon name="add-file" color="/primary" />
+    <CustomIcon name="add-file" color="/white" />
   </div>
 </template>
 
