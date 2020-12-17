@@ -1,73 +1,88 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        studio5_nuxt
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div class="page">
+    <h1 class="title">
+      {{ data.header.title }}
+    </h1>
+    <p>
+      {{ data.header.desc }}
+    </p>
+
+    <CaseStudie />
+
+    <CaseStudieApi />
   </div>
 </template>
 
 <script>
-export default {}
+import data from '@/content/cs.json'
+
+export default {
+  components: {
+  },
+
+  data () {
+    return {
+      data
+    }
+  },
+
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.description
+        },
+        {
+          hid: 'og:type',
+          name: 'og:type',
+          content: 'website'
+        },
+        {
+          hid: 'og:image',
+          name: 'og:image',
+          content: this.pageImage
+        },
+        {
+          hid: 'og:url',
+          name: 'og:url',
+          content: `https://www.patrikvadura.cz/${this.id}`
+        },
+        {
+          hide: 'twitter:card',
+          name: 'twitter:card',
+          content: this.pageImage ? 'summary_large_image' : 'summary'
+        }
+      ].filter(x => x.content)
+    }
+  }
+}
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+<style lang="scss">
+.page {
+  padding: 2rem 2rem;
   text-align: center;
 }
 
 .title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
   display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: rgb(0, 197, 142);
 }
 </style>

@@ -1,0 +1,49 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1260px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
+);
+
+$spacer: .5rem !default;
+$spacers: () !default;
+
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: $spacer,
+    2: ($spacer * 2),
+    3: ($spacer * 3),
+    4: ($spacer * 4),
+    5: ($spacer * 5),
+    6: ($spacer * 6)
+  ),
+  $spacers
+);
+
+$primary: rgb(0, 197, 142) !default;
+$secondary: #707070 !default;
+$typo: #1d1d1d !default;
+
+// @use "sass:map";
+// $theme-colors: (
+//    "success": #28a745,
+//    "info": #17a2b8,
+//    "warning": #ffc107,
+// );
+
+$font-primary:  "Nunito", sans-serif;
+
+$cubic: cubic-bezier(.4, .01, .165, .99);
+
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue/src/index.scss';

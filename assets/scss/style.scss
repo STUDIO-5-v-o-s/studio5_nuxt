@@ -1,0 +1,48 @@
+@import 'bootstrap';
+@import 'mixins';
+@import 'fonts';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  font-family: 'Mukta', sans-serif;
+  font-size: 1rem;
+  background: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+  @include media-breakpoint-down(sm) {
+    --slides-per-page: 2;
+
+    overflow-x: hidden;
+  }
+
+  @include media-breakpoint-between(lg, xl) {
+    --slides-per-page: 3;
+  }
+
+  @include media-breakpoint-up(xl) {
+    --slides-per-page: 4;
+  }
+}
+
+img,
+iframe {
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+}
+
+a {
+  text-decoration: none !important;
+}

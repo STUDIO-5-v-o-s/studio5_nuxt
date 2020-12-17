@@ -1,0 +1,16 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-no-px",
+    "stylelint-scss"
+  ],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
+    "scss/selector-no-redundant-nesting-selector": true,
+    "meowtec/no-px": [true, { "ignore": ["1px","-1px", "2px", "-2px", "3px", "-3px", "540px", "576px", "720px", "768px", "960px", "992px", "1200px", "1260px"] }],
+    "number-leading-zero": "never",
+    "unit-allowed-list": ["rem", "px", "%", "s", "ms", "deg", "fr"],
+    "color-hex-case": "lower"
+  }
+}

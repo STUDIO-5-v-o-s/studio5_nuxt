@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+h1,
+.h1 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 6rem;
+  font-weight: 400;
+  line-height: 7rem;
+}
+
+h2,
+.h2 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 5rem;
+}
+
+h3,
+.h3 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+  line-height: 3rem;
+}
+
+h4,
+.h4 {
+  font-family: 'Mukta', sans-serif;
+  font-weight: 400;
+  line-height: 2rem;
+}
+
+p {
+  font-family: 'Mukta', sans-serif;
+  font-weight: 200;
+  line-height: 2rem;
+}
