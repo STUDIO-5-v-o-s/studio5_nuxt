@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
-import Logo from '@/components/Logo.vue'
-import LogoNegative from '@/components/LogoNegative.vue'
-import LogoAlternative from '@/components/LogoAlternative.vue'
+import Logo from '~/components/brand/Logo.vue'
+import LogoNegative from '~/components/brand/LogoNegative.vue'
+import LogoAlternative from '~/components/brand/LogoAlternative.vue'
 
 describe('LogoNegative', () => {
   test('is a Vue instance', () => {
