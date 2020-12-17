@@ -5,7 +5,7 @@
     :alt="name"
     :width="width"
     class="custom-icon lazyload"
-    :class="{ 'custom-icon--shadow': shadow, 'custom-icon--background': background }"
+    :class="{ 'custom-icon--background': background }"
   >
 </template>
 
@@ -44,16 +44,11 @@ export default {
 .custom-icon {
   display: inline-flex;
 
-  &--shadow {
-    box-shadow: 0 .25rem .5rem 0 rgba(0, 0, 0, .16);
-    border-radius: .6rem;
-  }
-
   &--background {
-    width: 3rem;
-    background: #efefef;
-    border-radius: .6rem;
-    padding: .75rem;
+    width: 2rem;
+    background: $secondary;
+    border-radius: .5rem;
+    padding: .5rem;
   }
 }
 </style>

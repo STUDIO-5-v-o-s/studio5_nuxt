@@ -18,9 +18,7 @@
         <b-nav-item href="#">
           Link
         </b-nav-item>
-        <b-nav-item href="#" disabled>
-          Disabled
-        </b-nav-item>
+        <CustomButton title="Kontaktujte nás" class="ml-3" />
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -57,6 +55,12 @@ export default {
       background: $light;
       border-radius: .5rem;
       color: $primary !important;
+    }
+  }
+
+  ::v-deep .custom-button {
+    &:hover {
+      background: $light;
     }
   }
 
