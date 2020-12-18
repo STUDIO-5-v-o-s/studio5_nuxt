@@ -1,0 +1,40 @@
+{
+  "descriptions": {
+    "label": "Já jsem Label",
+    "textarea": "Já jsem Textarea",
+    "placeholder": "Já jsem Placeholder",
+    "h3": "H3 nadpis",
+    "h4": "H4 nadpis",
+    "h5": "H5 nadpis",
+    "p": "Ahoj já jsem běžný odstavcový text"
+  },
+  "links": {
+    "testLink": "https://www.google.com/",
+    "contact": "/contact",
+    "nav": [
+      {
+        "id": 1,
+        "url": "https://www.google.com/",
+        "title": "Item 1"
+      },
+      {
+        "id": 2,
+        "url": "https://www.google.com/",
+        "title": "Item 2"
+      },
+      {
+        "id": 3,
+        "url": "https://www.google.com/",
+        "title": "Item 3"
+      }
+    ]
+  },
+  "typography": {
+    "h1": "H1 nadpis",
+    "h2": "H2 nadpis",
+    "h3": "H3 nadpis",
+    "h4": "H4 nadpis",
+    "h5": "H5 nadpis",
+    "p": "Ahoj já jsem běžný odstavcový text"
+  }
+}

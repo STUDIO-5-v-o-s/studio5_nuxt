@@ -52,7 +52,7 @@ export default {
   align-items: center;
   border: none;
   padding: 0;
-  background: $primary;
+  background: rgba(233, 0, 99, .7);
 
   @include border-radius (.5rem);
 
@@ -63,11 +63,11 @@ export default {
   }
 
   &--secondary {
-    background: $secondary;
+    background: rgba(21, 34, 49, .7);
   }
 
   &--white {
-    background: #fff;
+    background: rgba(255, 255, 255, .7);
 
     @include shadow (.1);
 
@@ -77,7 +77,7 @@ export default {
   }
 
   &--green {
-    background: #6fb528;
+    background: rgba(108, 177, 33, .7);
 
     .custom-badge span {
       color: $secondary;

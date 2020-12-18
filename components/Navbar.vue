@@ -1,30 +1,42 @@
 <template>
   <b-navbar toggleable="lg" class="navbar">
     <b-navbar-brand href="#">
-      <LogoAlternative class="navbar__logo" />
+      <Logo class="navbar__logo" secondary />
     </b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse" />
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav class="ml-auto navbar__links">
-        <b-nav-item href="#">
-          Link
-        </b-nav-item>
-        <b-nav-item href="#">
-          Link
-        </b-nav-item>
-        <b-nav-item href="#">
-          Link
-        </b-nav-item>
-        <CustomButton title="Kontaktujte nás" />
+        <div
+          v-for="item in data.links.nav"
+          :key="item.id"
+        >
+          <b-nav-item
+            :posts="item.title"
+            :href="item.url"
+          >
+            {{ item.title }}
+          </b-nav-item>
+        </div>
+        <CustomButton
+          title="Kontaktujte nás"
+          :href="data.links.contact"
+        />
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
 </template>
 
 <script>
+import data from '@/content/testapi.json'
+
 export default {
+  data () {
+    return {
+      data
+    }
+  }
 }
 </script>
 
@@ -52,8 +64,7 @@ export default {
     color: #fff !important;
     font-size: .9rem !important;
     font-weight: 700;
-
-    @include transition (300ms, ease-in-out);
+    transition: all 300ms ease-in-out;
 
     &:hover {
       padding-left: 1rem;
