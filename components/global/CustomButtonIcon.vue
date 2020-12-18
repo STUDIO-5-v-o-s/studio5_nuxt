@@ -12,7 +12,7 @@
         :src="require(`~/assets/images/icons/white/${icon}.svg`)"
         title=""
         :alt="icon"
-        class="custom-button__box--icon"
+        class="custom-button__box--icon lazyload"
       >
 
       <div class="custom-button__box--title">
@@ -84,9 +84,9 @@ export default {
   padding: 0;
   background: $primary;
   cursor: pointer;
+  transition: all 300ms ease-in-out;
 
   @include border-radius (.25rem);
-  @include transition (300ms, ease-in-out);
 
   &:hover {
     background: $secondary;

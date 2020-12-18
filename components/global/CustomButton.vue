@@ -76,9 +76,9 @@ export default {
   padding: 0;
   background: $primary;
   cursor: pointer;
+  transition: all 300ms ease-in-out;
 
   @include border-radius (.25rem);
-  @include transition (300ms, ease-in-out);
 
   &:hover {
     background: $secondary;

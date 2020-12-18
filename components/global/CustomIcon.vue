@@ -4,7 +4,7 @@
     title=""
     :alt="name"
     :width="width"
-    class="custom-icon"
+    class="custom-icon lazyload"
     :class="{ 'custom-icon--background': background }"
   >
 </template>
