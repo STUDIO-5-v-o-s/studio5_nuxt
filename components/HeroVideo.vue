@@ -1,13 +1,13 @@
 <template>
-  <b-container fluid class="hero">
+  <b-container fluid class="p-0 m-0 hero">
     <video
-      src="https://css-tricks-post-videos.s3.us-east-1.amazonaws.com/Island%20-%204141.mp4"
+      src="https://st4.depositphotos.com/24158806/27894/v/600/depositphotos_278945248-stock-video-beautiful-minimal-background-with-moving.mp4"
       autoplay
       loop
       playsinline
       muted
     />
-    <b-row cols="1" align-v="center" class="text-left hero__content">
+    <b-row cols="1" align-v="center" class="text-left hero__content overlay">
       <b-col
         class="px-4 text-center"
       >
@@ -18,7 +18,7 @@
           <p>
             {{ data.hero.description }}
           </p>
-          <div class="hero__actions d-flex align-items-center flex-column">
+          <div class="hero__actions d-flex align-items-center flex-md-row flex-column">
             <CustomButton
               :title="data.hero.button_1"
               href="/portfolio"
@@ -54,22 +54,30 @@ export default {
 
 <style lang="scss" scoped>
 .hero {
-  padding: 1rem 3rem 3rem 3rem;
-  position: absolute;
+  padding: 0;
+  position: relative;
   text-align: center;
   width: 100%;
-  height: 100vh;
-  top: 3rem;
+  height: 60vh;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    height: 90vh;
+  }
 
   video {
     background: $secondary;
     object-fit: cover;
-    filter: blur(3px);
-
-    @include coverer (100%, 60vh, 3rem);
+    filter: blur(1px);
+    width: 100%;
+    height: 60vh;
+    position: absolute;
+    top: 0;
+    left: 0;
 
     @include media-breakpoint-down(sm) {
-      @include coverer (100%, 100%, 3rem);
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -91,12 +99,14 @@ export default {
     padding: 2rem 2rem 3rem 2rem;
   }
 
+  .overlay {
+    background: rgba(21, 34, 49, .8);
+  }
+
   &__content {
-    margin-top: 3rem;
     height: 60vh;
 
     @include media-breakpoint-down(sm) {
-      margin-top: 0;
       height: 100%;
     }
 

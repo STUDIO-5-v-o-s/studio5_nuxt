@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <Hero />
+    <h1>Test</h1>
   </div>
 </template>
 
@@ -9,7 +10,7 @@ import data from '@/content/cs.json'
 
 export default {
   components: {
-    Hero: () => import('~/components/Hero')
+    Hero: () => import('~/components/HeroVideo')
   },
 
   data () {
