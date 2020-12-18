@@ -21,7 +21,7 @@ export default {
   ],
   styleResources: {
     scss: [
-      '@/assets/scss/style.scss'
+      '@/assets/scss/_vars.scss'
     ]
   },
 
