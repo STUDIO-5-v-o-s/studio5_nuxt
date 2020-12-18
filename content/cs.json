@@ -34,5 +34,11 @@
         "title": "Menu item 6"
       }
     ]
+  },
+  "error": {
+    "title": "404",
+    "subtitle": "Page not found",
+    "goBack": "Zpět",
+    "goHome": "Zpět na úvodní stránku"
   }
 }

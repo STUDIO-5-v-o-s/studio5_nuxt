@@ -1,9 +1,11 @@
 <template>
-  <div v-if="error.statusCode === 404">
-    <Error />
-  </div>
-  <div v-else>
-    An error occurred
+  <div class="noPage">
+    <div v-if="error.statusCode === 404">
+      <Error />
+    </div>
+    <div v-else>
+      An error occurred
+    </div>
   </div>
 </template>
 
@@ -21,3 +23,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.noPage {
+  background: $secondary;
+}
+</style>
