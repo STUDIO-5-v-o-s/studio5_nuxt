@@ -1,42 +1,22 @@
 {
+  "descriptions": {
+    "label": "Já jsem Label",
+    "textarea": "Já jsem Textarea",
+    "placeholder": "Já jsem Placeholder",
+    "h3": "H3 nadpis",
+    "h4": "H4 nadpis",
+    "h5": "H5 nadpis",
+    "p": "Ahoj já jsem běžný odstavcový text"
+  },
+  "links": {
+    "testLink": "https://www.google.com/"
+  },
   "typography": {
     "h1": "H1 nadpis",
     "h2": "H2 nadpis",
     "h3": "H3 nadpis",
     "h4": "H4 nadpis",
     "h5": "H5 nadpis",
-    "p": "Ahoj já jsem běžný odstavcový text",
-    "links": [
-      {
-        "id": 1,
-        "url": "/",
-        "title": "Menu item 1"
-      },
-      {
-        "id": 2,
-        "url": "/",
-        "title": "Menu item 2"
-      },
-      {
-        "id": 3,
-        "url": "/",
-        "title": "Menu item 3"
-      },
-      {
-        "id": 4,
-        "url": "/",
-        "title": "Menu item 4"
-      },
-      {
-        "id": 5,
-        "url": "/",
-        "title": "Menu item 5"
-      },
-      {
-        "id": 6,
-        "url": "/",
-        "title": "Menu item 6"
-      }
-    ]
+    "p": "Ahoj já jsem běžný odstavcový text"
   }
 }

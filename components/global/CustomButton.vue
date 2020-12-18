@@ -7,9 +7,26 @@
     :disabled="disabled"
     @click="$emit('click', $event)"
   >
-    <div class="custom-button__title">
-      {{ title }}
-    </div>
+    <template v-if="icon">
+      <div class="custom-button__box">
+        <img
+          :src="require(`~/assets/images/icons/white/${icon}.svg`)"
+          title=""
+          :alt="icon"
+          class="custom-button__box--icon"
+        >
+
+        <div class="custom-button__box--title">
+          {{ title }}
+        </div>
+      </div>
+    </template>
+
+    <template v-else>
+      <div class="custom-button__title">
+        {{ title }}
+      </div>
+    </template>
   </b-button>
 </template>
 
@@ -27,6 +44,11 @@ export default {
       default: ''
     },
     href: {
+      type: String,
+      required: false,
+      default: ''
+    },
+    icon: {
       type: String,
       required: false,
       default: ''
@@ -84,6 +106,24 @@ export default {
     background: $secondary;
   }
 
+  &__box {
+    padding: .5rem 1rem;
+    display: inline-flex;
+
+    &--icon {
+      display: inline-flex;
+      width: 1rem;
+    }
+
+    &--title {
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: center;
+      padding-left: .5rem;
+      color: #fff;
+    }
+  }
+
   &__title {
     font-size: 1rem;
     font-weight: 600;
@@ -105,6 +145,10 @@ export default {
     background: $secondary;
 
     .custom-button__title {
+      color: #fff;
+    }
+
+    .custom-button__box--title {
       color: #fff;
     }
 

@@ -1,35 +1,53 @@
 <template>
   <div class="custom-input">
-    <label v-if="label" :for="name" class="custom-input__label">
-      {{ label }}
-    </label>
+    <template v-if="textarea">
+      <label v-if="label" :for="name" class="custom-input__label">
+        {{ label }}
+      </label>
 
-    <div class="custom-input__input" :class="classes">
-      <input
-        :id="name"
-        :name="name"
-        :value="value"
-        :type="type"
-        :placeholder="placeholder"
-        :disabled="disabled"
-        :class="{ 'no-label': !label }"
-        @input="$emit('input', $event.target.value)"
-        @focus="focused = true"
-        @blur="focused = false"
-        @keyup="$emit('keyup', $event)"
-        @click="$emit('click', $event)"
-      >
-    </div>
+      <div class="custom-input__textarea" :class="classes">
+        <b-form-textarea
+          :id="name"
+          :type="name"
+          :placeholder="placeholder"
+          :rows="rows"
+          :max-rows="rows + 3"
+          :disabled="disabled"
+          :class="{ 'no-label': !label }"
+          @focus="focused = true"
+          @blur="focused = false"
+          @keyup="$emit('keyup', $event)"
+          @click="$emit('click', $event)"
+        />
+      </div>
+    </template>
+
+    <template v-else>
+      <label v-if="label" :for="name" class="custom-input__label">
+        {{ label }}
+      </label>
+
+      <div class="custom-input__input" :class="classes">
+        <input
+          :id="name"
+          :name="name"
+          :type="type"
+          :placeholder="placeholder"
+          :disabled="disabled"
+          :class="{ 'no-label': !label }"
+          @focus="focused = true"
+          @blur="focused = false"
+          @keyup="$emit('keyup', $event)"
+          @click="$emit('click', $event)"
+        >
+      </div>
+    </template>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    value: {
-      type: [String, Number],
-      required: true
-    },
     name: {
       type: String,
       required: true
@@ -54,19 +72,20 @@ export default {
       required: false,
       default: false
     },
-    wide: {
-      type: Boolean,
-      required: false,
-      default: false
-    },
     height: {
       type: Boolean,
       required: false,
       default: false
     },
-    rules: {
+    textarea: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    rows: {
       type: String,
-      default: ''
+      required: false,
+      default: '3'
     }
   },
   data () {
@@ -79,7 +98,6 @@ export default {
       return {
         'custom-input__input--disabled': this.disabled,
         'custom-input__input--focused': this.focused,
-        'custom-input__input--wide': this.wide,
         'custom-input__input--height': this.height
       }
     }
@@ -113,7 +131,7 @@ export default {
       overflow: hidden;
       text-overflow: ellipsis;
       font-size: 1rem;
-      color: #000;
+      color: #495057;
       padding: 0 1.25rem;
       border: 0;
       background: transparent;
@@ -124,14 +142,14 @@ export default {
 
       input::-webkit-input-placeholder {
         opacity: .7;
-        color: #fff;
+        color: #495057;
       }
 
       input {
         border: 0;
         box-shadow: none;
         outline: 0;
-        color: #fff;
+        color: #495057;
       }
     }
 
@@ -139,22 +157,53 @@ export default {
       background: red;
     }
 
-    &--wide {
-      width: 100%;
-
-      input {
-        width: 100%;
-      }
-    }
-
     &--height {
-      height: 10rem;
+      height: 4rem;
       width: 100%;
 
       input {
         height: 100%;
         width: 100%;
       }
+    }
+  }
+
+  &__textarea {
+    display: flex;
+    border-radius: .5rem;
+    overflow: hidden;
+    background: white;
+    transition: all 3ms;
+
+    @include shadow(.1);
+
+    textarea {
+      white-space: nowrap;
+      font-size: 1rem;
+      color: #495057;
+      padding: 0 1.25rem;
+      border: 0;
+      background: transparent;
+    }
+
+    &--focused {
+      border: 2px solid $primary;
+
+      input::-webkit-input-placeholder {
+        opacity: .7;
+        color: #495057;
+      }
+
+      input {
+        border: 0;
+        box-shadow: none;
+        outline: 0;
+        color: #495057;
+      }
+    }
+
+    &--error {
+      background: red;
     }
   }
 
@@ -165,6 +214,6 @@ export default {
 }
 
 input::-webkit-input-placeholder {
-  color: #373a3c;
+  color: #495057;
 }
 </style>

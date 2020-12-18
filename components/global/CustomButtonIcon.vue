@@ -12,7 +12,7 @@
         :src="require(`~/assets/images/icons/white/${icon}.svg`)"
         title=""
         :alt="icon"
-        class="custom-button__box--icon lazyload"
+        class="custom-button__box--icon"
       >
 
       <div class="custom-button__box--title">
