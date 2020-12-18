@@ -81,11 +81,12 @@ export default {
   height: 2rem;
   line-height: 2rem;
   border: none;
-  border-radius: .25rem;
   padding: 0;
   background: $primary;
   cursor: pointer;
-  transition: all 300ms ease-in-out;
+
+  @include border-radius (.25rem);
+  @include transition (300ms, ease-in-out);
 
   &:hover {
     background: $secondary;
