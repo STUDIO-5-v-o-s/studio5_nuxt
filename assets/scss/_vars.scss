@@ -35,7 +35,9 @@ $secondary: #152231 !default;
 $light: #ffffff10 !default;
 $typo: #1d1d1d !default;
 
-$font-primary:  "Nunito", sans-serif;
+$font-primary:  "Mukta", sans-serif;
+$font-paragraph:  "Mukta", sans-serif;
+$font-buttons:  "Mukta", sans-serif;
 
 @import 'mixins';
 @import '~bootstrap/scss/functions';

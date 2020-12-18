@@ -13,10 +13,8 @@ html {
 }
 
 body {
-  font-family: $font-primary;
-  font-size: 1rem;
   background: #fff;
-  color: #000;
+  color: $typo;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -31,4 +29,8 @@ iframe {
 
 a {
   text-decoration: none !important;
+}
+
+button:focus {
+  outline: none;
 }
