@@ -69,6 +69,11 @@ export default {
       required: false,
       default: false
     },
+    light: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
     disabled: {
       type: Boolean,
       required: false,
@@ -81,7 +86,8 @@ export default {
       return {
         'custom-button--wide': this.wide,
         'custom-button': this.primary,
-        'custom-button--secondary': this.secondary
+        'custom-button--secondary': this.secondary,
+        'custom-button--light': this.light
       }
     }
   }
@@ -155,6 +161,30 @@ export default {
 
     &:hover {
       background: $primary;
+    }
+  }
+
+  &--light {
+    background: $light;
+
+    .custom-button__title {
+      color: #fff;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+
+    .custom-button__box--title {
+      color: #fff;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+
+    &:hover {
+      background: #fff;
     }
   }
 }

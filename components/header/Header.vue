@@ -1,11 +1,9 @@
 <template>
-  <div class="header d-flex justify-content-center">
-    <b-container fluid="lg">
-      <b-col>
-        <Navbar />
-      </b-col>
-    </b-container>
-  </div>
+  <b-container fluid class="header d-flex justify-content-center">
+    <b-col>
+      <Navbar />
+    </b-col>
+  </b-container>
 </template>
 
 <script>
@@ -13,7 +11,7 @@ import data from '~/content/cs.json'
 
 export default {
   components: {
-    Navbar: () => import('@/components/Navbar')
+    Navbar: () => import('~/components/header/Navbar')
   },
 
   data () {
@@ -26,7 +24,7 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  padding: 3rem 0 3rem 0;
+  padding: 3rem 3rem;
   background: $secondary;
 
   @include media-breakpoint-down(sm) {

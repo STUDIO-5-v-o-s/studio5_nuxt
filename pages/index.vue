@@ -1,11 +1,6 @@
 <template>
   <div class="home">
-    <h1>
-      {{ data.header.title }}
-    </h1>
-    <p>
-      {{ data.header.desc }}
-    </p>
+    <Hero />
   </div>
 </template>
 
@@ -14,6 +9,7 @@ import data from '@/content/cs.json'
 
 export default {
   components: {
+    Hero: () => import('~/components/Hero')
   },
 
   data () {
@@ -70,7 +66,6 @@ export default {
 
 <style lang="scss">
 .home {
-  padding: 2rem 2rem;
-  text-align: center;
+  padding: 0;
 }
 </style>
