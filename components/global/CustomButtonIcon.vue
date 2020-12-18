@@ -7,8 +7,17 @@
     :disabled="disabled"
     @click="$emit('click', $event)"
   >
-    <div class="custom-button__title">
-      {{ title }}
+    <div class="custom-button__box">
+      <img
+        :src="require(`~/assets/images/icons/white/${icon}.svg`)"
+        title=""
+        :alt="icon"
+        class="custom-button__box--icon"
+      >
+
+      <div class="custom-button__box--title">
+        {{ title }}
+      </div>
     </div>
   </b-button>
 </template>
@@ -31,10 +40,10 @@ export default {
       required: false,
       default: ''
     },
-    wide: {
-      type: Boolean,
+    icon: {
+      type: String,
       required: false,
-      default: false
+      default: ''
     },
     primary: {
       type: Boolean,
@@ -56,7 +65,6 @@ export default {
   computed: {
     classes () {
       return {
-        'custom-button--wide': this.wide,
         'custom-button': this.primary,
         'custom-button--secondary': this.secondary
       }
@@ -83,26 +91,28 @@ export default {
     background: $secondary;
   }
 
-  &__title {
-    font-size: 1rem;
-    font-weight: 600;
-    text-align: center;
+  &__box {
     padding: .5rem 1rem;
-    color: #fff;
-  }
+    display: inline-flex;
 
-  &--wide {
-    width: 100%;
+    &--icon {
+      display: inline-flex;
+      width: 1rem;
+    }
 
-    .custom-button__title {
-      width: 100%;
+    &--title {
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: center;
+      padding-left: .5rem;
+      color: #fff;
     }
   }
 
   &--secondary {
     background: $secondary;
 
-    .custom-button__title {
+    .custom-button__box--title {
       color: #fff;
     }
 
