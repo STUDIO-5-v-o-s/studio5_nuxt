@@ -7,6 +7,12 @@
       {{ data.header.desc }}
     </p>
     <CustomButton title="Button" href="" primary />
+    <CustomButton title="Button" href="" secondary />
+    <br><br>
+    <CustomButtonIcon title="Button" href="" icon="add-file" primary />
+    <CustomButtonIcon title="Button" href="" icon="add-file" secondary />
+    <br><br>
+    <CustomButtonIcon title="Button" href="" icon="add-file" wide secondary />
     <br><br>
     <CustomButton title="Button" href="" wide secondary />
     <CustomIcon name="add-file" />
