@@ -7,7 +7,6 @@
     <b-navbar-toggle target="nav-collapse" />
 
     <b-collapse id="nav-collapse" is-nav>
-      <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto navbar__links">
         <b-nav-item href="#">
           Link
@@ -18,7 +17,7 @@
         <b-nav-item href="#">
           Link
         </b-nav-item>
-        <CustomButton title="Kontaktujte nás" class="ml-3" />
+        <CustomButton title="Kontaktujte nás" />
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -36,11 +35,16 @@ export default {
   }
 
   &__links {
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
       margin-top: 2rem;
       padding: 1rem 2rem;
       background: $light;
-      border-radius: 1rem;
+
+      @include border-radius (1rem);
+    }
+
+    @include media-breakpoint-down(sm) {
+      text-align: center;
     }
   }
 
@@ -48,18 +52,33 @@ export default {
     color: #fff !important;
     font-size: .9rem !important;
     font-weight: 700;
-    transition: all 300ms ease-in-out;
+
+    @include transition (300ms, ease-in-out);
 
     &:hover {
       padding-left: 1rem;
       padding-right: 1rem;
       background: $light;
-      border-radius: .5rem;
       color: $primary !important;
+
+      @include border-radius (.5rem);
     }
   }
 
   ::v-deep .custom-button {
+    margin-left: 1rem;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 1rem;
+      margin-left: 0;
+    }
+
+    .custom-button__title {
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+    }
+
     &:hover {
       background: $light;
     }
@@ -69,7 +88,8 @@ export default {
     padding: 1rem 1.25rem;
     background: $light;
     border: none;
-    border-radius: .5rem;
+
+    @include border-radius (.5rem);
 
     &:focus,
     &:hover {

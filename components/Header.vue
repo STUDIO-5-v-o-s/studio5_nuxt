@@ -28,5 +28,9 @@ export default {
 .header {
   padding: 3rem 0 3rem 0;
   background: $secondary;
+
+  @include media-breakpoint-down(sm) {
+    padding: 1rem 0 1rem 0;
+  }
 }
 </style>

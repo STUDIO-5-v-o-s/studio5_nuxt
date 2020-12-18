@@ -6,19 +6,30 @@
     <p>
       {{ data.header.desc }}
     </p>
-    <CustomButton title="Button" href="" primary />
-    <CustomButton title="Button" href="" secondary />
-    <br><br>
-    <CustomButtonIcon title="Button" href="" icon="add-file" primary />
-    <CustomButtonIcon title="Button" href="" icon="add-file" secondary />
-    <br><br>
-    <CustomButtonIcon title="Button" href="" icon="add-file" wide secondary />
-    <br><br>
-    <CustomButton title="Button" href="" wide secondary />
-    <CustomIcon name="add-file" />
-    <CustomIcon name="add-file" width="64" />
-    <CustomIcon name="add-file" color="/primary" />
-    <CustomIcon name="add-file" color="/white" background />
+    <div class="py-2">
+      <CustomButton title="Button" href="" primary />
+      <CustomButton title="Button" href="" secondary />
+    </div>
+    <div class="py-2">
+      <CustomButtonIcon title="Button" href="" icon="add-file" primary />
+      <CustomButtonIcon title="Button" href="" icon="add-file" secondary />
+    </div>
+    <div class="py-2">
+      <CustomButton title="Button" href="" wide />
+      <CustomButton title="Button" href="" wide secondary />
+    </div>
+    <div class="py-2">
+      <CustomIcon name="add-file" />
+      <CustomIcon name="add-file" width="64" />
+      <CustomIcon name="add-file" color="/primary" />
+      <CustomIcon name="add-file" color="/white" background />
+    </div>
+    <div class="py-2">
+      <CustomBadge title="Badge" />
+      <CustomBadge title="Badge" secondary />
+      <CustomBadge title="Badge" green />
+      <CustomBadge title="Badge" white />
+    </div>
   </div>
 </template>
 
@@ -92,6 +103,6 @@ export default {
   font-weight: 800;
   font-size: 2rem;
   line-height: 3rem;
-  color: rgb(0, 197, 142);
+  color: $primary;
 }
 </style>
