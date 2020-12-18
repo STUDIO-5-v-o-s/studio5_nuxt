@@ -7,6 +7,15 @@
       playsinline
       muted
     />
+
+    <!--
+    <img
+      src="~/assets/images/fakeapi/fakeapi.jpg"
+      srcset="~/assets/images/fakeapi/fakeapi.jpg 1x, ~/assets/images/fakeapi/fakeapi.jpg 2x"
+      alt="fakeapi"
+    >
+    -->
+
     <b-row cols="1" align-v="center" class="text-left hero__content overlay">
       <b-col
         class="px-4 text-center"
@@ -59,13 +68,15 @@ export default {
   text-align: center;
   width: 100%;
   height: 60vh;
+  object-fit: cover;
 
   @include media-breakpoint-down(sm) {
     width: 100%;
     height: 90vh;
   }
 
-  video {
+  video,
+  img {
     background: $secondary;
     object-fit: cover;
     filter: blur(1px);
@@ -79,12 +90,6 @@ export default {
       width: 100%;
       height: 100%;
     }
-  }
-
-  .viewport-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   @include media-breakpoint-down(lg) {
