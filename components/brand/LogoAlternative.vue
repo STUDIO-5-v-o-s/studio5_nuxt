@@ -42,6 +42,7 @@
 
   &__5 {
     fill: $primary;
+    transition: all 300ms ease-in-out;
 
     &:hover {
       fill: #fff;
