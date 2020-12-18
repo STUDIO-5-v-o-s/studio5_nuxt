@@ -52,8 +52,7 @@ export default {
     color: #fff !important;
     font-size: .9rem !important;
     font-weight: 700;
-
-    @include transition (300ms, ease-in-out);
+    transition: all 300ms ease-in-out;
 
     &:hover {
       padding-left: 1rem;

@@ -42,8 +42,7 @@
 
   &__5 {
     fill: $primary;
-
-    @include transition (300ms, ease-in-out);
+    transition: all 300ms ease-in-out;
 
     &:hover {
       fill: #000;

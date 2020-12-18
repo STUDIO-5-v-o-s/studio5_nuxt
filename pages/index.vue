@@ -1,35 +1,11 @@
 <template>
-  <div class="page">
-    <h1 class="title">
+  <div class="home">
+    <h1>
       {{ data.header.title }}
     </h1>
     <p>
       {{ data.header.desc }}
     </p>
-    <div class="py-2">
-      <CustomButton title="Button" href="" primary />
-      <CustomButton title="Button" href="" secondary />
-    </div>
-    <div class="py-2">
-      <CustomButtonIcon title="Button" href="" icon="add-file" primary />
-      <CustomButtonIcon title="Button" href="" icon="add-file" secondary />
-    </div>
-    <div class="py-2">
-      <CustomButton title="Button" href="" wide />
-      <CustomButton title="Button" href="" wide secondary />
-    </div>
-    <div class="py-2">
-      <CustomIcon name="add-file" />
-      <CustomIcon name="add-file" width="64" />
-      <CustomIcon name="add-file" color="/primary" />
-      <CustomIcon name="add-file" color="/white" background />
-    </div>
-    <div class="py-2">
-      <CustomBadge title="Badge" />
-      <CustomBadge title="Badge" secondary />
-      <CustomBadge title="Badge" green />
-      <CustomBadge title="Badge" white />
-    </div>
   </div>
 </template>
 
@@ -93,16 +69,8 @@ export default {
 </script>
 
 <style lang="scss">
-.page {
+.home {
   padding: 2rem 2rem;
   text-align: center;
-}
-
-.title {
-  display: block;
-  font-weight: 800;
-  font-size: 2rem;
-  line-height: 3rem;
-  color: $primary;
 }
 </style>
