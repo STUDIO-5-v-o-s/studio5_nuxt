@@ -1,6 +1,7 @@
 <template>
   <b-button
     :id="id"
+    :href="href"
     type="submit"
     class="custom-button"
     :class="classes"
