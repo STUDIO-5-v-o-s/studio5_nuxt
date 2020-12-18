@@ -1,0 +1,38 @@
+{
+  "header": {
+    "title": "Nuxt.js startup framework!",
+    "desc": "Start your website or landing page with user friendly framework!",
+    "links": [
+      {
+        "id": 1,
+        "url": "/",
+        "title": "Menu item 1"
+      },
+      {
+        "id": 2,
+        "url": "/",
+        "title": "Menu item 2"
+      },
+      {
+        "id": 3,
+        "url": "/",
+        "title": "Menu item 3"
+      },
+      {
+        "id": 4,
+        "url": "/",
+        "title": "Menu item 4"
+      },
+      {
+        "id": 5,
+        "url": "/",
+        "title": "Menu item 5"
+      },
+      {
+        "id": 6,
+        "url": "/",
+        "title": "Menu item 6"
+      }
+    ]
+  }
+}
