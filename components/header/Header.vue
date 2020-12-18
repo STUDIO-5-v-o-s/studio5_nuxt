@@ -24,7 +24,7 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  padding: 3rem 3rem;
+  padding: 1.5rem 3rem;
   background: $secondary;
 
   @include media-breakpoint-down(sm) {
