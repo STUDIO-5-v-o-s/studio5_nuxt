@@ -1,5 +1,5 @@
 <template>
-  <b-navbar toggleable="lg" class="navbar">
+  <b-navbar id="scroll" toggleable="lg" class="navbar">
     <b-navbar-brand href="/">
       <Logo class="navbar__logo" secondary />
     </b-navbar-brand>
@@ -36,6 +36,22 @@ export default {
     return {
       data
     }
+  },
+
+  mounted () {
+    this.$nextTick(function () {
+      window.addEventListener('scroll', function () {
+        const navbar = document.getElementById('scroll')
+        const navClasses = navbar.classList
+        if (document.documentElement.scrollTop >= 150) {
+          if (navClasses.contains('resize') === false) {
+            navClasses.toggle('resize')
+          }
+        } else if (navClasses.contains('resize') === true) {
+          navClasses.toggle('resize')
+        }
+      })
+    })
   }
 }
 </script>
@@ -118,6 +134,14 @@ export default {
         background-image: url('~assets/images/icons/primary/burger.svg');
       }
     }
+  }
+}
+
+.resize {
+  .navbar__logo {
+    width: 8rem;
+
+    @include scrollHeader(.6s);
   }
 }
 </style>

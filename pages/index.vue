@@ -2,6 +2,18 @@
   <div class="home">
     <Hero />
     <h1>Test</h1>
+    <h1>Test</h1>
+    <h1>Test</h1>
+    <h1>Test</h1>
+    <h1>Test</h1>
+    <h1>Test</h1>
+    <h1>Test</h1>
+    <h1>Test</h1>
+    <h1>Test</h1>
+    <h1>Test</h1>
+    <h1>Test</h1>
+    <h1>Test</h1>
+    <h1>Test</h1>
   </div>
 </template>
 
