@@ -1,6 +1,6 @@
 <template>
   <b-navbar toggleable="lg" class="navbar">
-    <b-navbar-brand href="#">
+    <b-navbar-brand href="/">
       <Logo class="navbar__logo" secondary />
     </b-navbar-brand>
 
@@ -9,7 +9,7 @@
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav class="ml-auto navbar__links">
         <div
-          v-for="item in data.links.nav"
+          v-for="item in data.header.links"
           :key="item.id"
         >
           <b-nav-item
@@ -20,8 +20,8 @@
           </b-nav-item>
         </div>
         <CustomButton
-          title="Kontaktujte nás"
-          :href="data.links.contact"
+          :title="data.header.button"
+          href="/"
         />
       </b-navbar-nav>
     </b-collapse>
@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import data from '@/content/testapi.json'
+import data from '~/content/cs.json'
 
 export default {
   data () {
@@ -111,7 +111,7 @@ export default {
     &-icon {
       display: inline-block;
       width: 1.25rem;
-      background-image: url('~assets/images/icons/burger.svg');
+      background-image: url('~assets/images/icons/white/burger.svg');
       vertical-align: middle;
 
       &:active {

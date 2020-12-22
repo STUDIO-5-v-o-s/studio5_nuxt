@@ -9,7 +9,7 @@
 
 export default {
   components: {
-    Header: () => import('@/components/Header')
+    Header: () => import('~/components/header/Header')
   }
 }
 </script>
