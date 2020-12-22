@@ -37,7 +37,7 @@
   },
   "error": {
     "title": "404",
-    "subtitle": "Page not found",
+    "subtitle": "Vypadá to, že jste se ztratili",
     "goBack": "Zpět",
     "goHome": "Zpět na úvodní stránku"
   }
