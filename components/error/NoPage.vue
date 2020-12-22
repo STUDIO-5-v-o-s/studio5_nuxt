@@ -1,70 +1,20 @@
 <template>
   <div class="noPage">
-    <svg
-      width="380px"
-      height="500px"
-      viewBox="0 0 837 1045"
-      version="1.1"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
-    >
-      <g
-        id="Page-1"
-        stroke="none"
-        stroke-width="1"
-        fill="none"
-        fill-rule="evenodd"
-        sketch:type="MSPage"
-      >
-        <path
-          id="Polygon--1"
-          d="M353,9 L626.664028,170 L626.664028,487 L353,642 L79.3359724,487 L79.3359724,170 L353,9 Z"
-          stroke="#152231"
-          stroke-width="6"
-          sketch:type="MSShapeGroup"
-        />
-        <path
-          id="Polygon--2"
-          d="M78.5,529 L147,569.186414 L147,648.311216 L78.5,687 L10,648.311216 L10,569.186414 L78.5,529 Z"
-          fill="#152231"
-          stroke-width="6"
-          sketch:type="MSShapeGroup"
-        />
-        <path
-          id="Polygon--3"
-          d="M773,186 L827,217.538705 L827,279.636651 L773,310 L719,279.636651 L719,217.538705 L773,186 Z"
-          fill="#e91e63"
-          stroke="#e91e63"
-          stroke-width="6"
-          sketch:type="MSShapeGroup"
-        />
-        <path
-          id="Polygon--4"
-          d="M639,529 L773,607.846761 L773,763.091627 L639,839 L505,763.091627 L505,607.846761 L639,529 Z"
-          stroke="#e91e63"
-          stroke-width="6"
-          sketch:type="MSShapeGroup"
-        />
-        <path
-          id="Polygon--5"
-          d="M281,801 L383,861.025276 L383,979.21169 L281,1037 L179,979.21169 L179,861.025276 L281,801 Z"
-          fill="#e91e63"
-          stroke-width="6"
-          sketch:type="MSShapeGroup"
-        />
-      </g>
-    </svg>
-    <div class="message-box">
+    <div>
       <h1>
         {{ data.error.title }}
       </h1>
-      <h4>
-        {{ data.error.subtitle }}
-      </h4>
-      <div class="pt-3">
-        <CustomButton :title="data.error.goBack" onclick="history.back(-1)" />
-        <CustomButton :title="data.error.goHome" href="/" />
+      <div class="noPage__background" />
+
+      <div class="noPage__content">
+        <h3>
+          {{ data.error.subtitle }}
+        </h3>
+
+        <div class="noPage__content--action">
+          <CustomButton :title="data.error.goBack" secondary onclick="history.back(-1)" />
+          <CustomButton :title="data.error.goHome" href="/" class="mt-1 mt-md-0" />
+        </div>
       </div>
     </div>
   </div>
@@ -84,82 +34,42 @@ export default {
 
 <style lang="scss" scoped>
 .noPage {
-  background: $secondary;
-}
+  padding: 5rem 0;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
 
-svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -16.25rem;
-  margin-left: -25rem;
-}
-
-.message-box {
-  height: 12.5rem;
-  width: 24rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -6.25;
-  margin-left: 3rem;
-  color: $primary;
-  font-weight: 300;
-}
-
-.message-box h1 {
-  font-size: 6rem;
-  line-height: 2.75rem;
-  margin-bottom: 2.5rem;
-}
-
-#Polygon {
-  &--1 {
-    animation: float 1s infinite ease-in-out alternate;
+  h1 {
+    font-size: 5rem;
   }
 
-  &--2 {
-    animation: float 1s infinite ease-in-out alternate;
-    animation-delay: .2s;
+  &__content {
+    padding: 0;
+
+    &--action {
+      padding-top: 2rem;
+      display: block;
+
+      @include media-breakpoint-down(sm) {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 3rem;
+      }
+
+      ::v-deep .custom-button {
+        .custom-button__title {
+          @include media-breakpoint-down(sm) {
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 
-  &--3 {
-    animation: float 1s infinite ease-in-out alternate;
-    animation-delay: .4s;
-  }
-
-  &--4 {
-    animation: float 1s infinite ease-in-out alternate;
-    animation-delay: .6s;
-  }
-
-  &--5 {
-    animation: float 1s infinite ease-in-out alternate;
-    animation-delay: .8s;
-  }
-}
-
-@keyframes float {
-  100% {
-    transform: translateY(1.25rem);
-  }
-}
-
-@media (max-width: 450px) {
-  svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -15.5rem;
-    margin-left: -12rem;
-  }
-
-  .message-box {
-    top: 50%;
-    left: 50%;
-    margin-top: -6.25rem;
-    margin-left: -12rem;
-    text-align: center;
+  &__background {
+    background-image: url("~assets/images/error/404-error.gif");
+    height: 23rem;
+    background-position: center;
   }
 }
 </style>
