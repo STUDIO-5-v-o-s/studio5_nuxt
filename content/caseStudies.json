@@ -1,0 +1,39 @@
+{
+  "caseStudies": {
+    "links": [
+      {
+        "id": 1,
+        "url": "/services",
+        "title": "Služby"
+      },
+      {
+        "id": 2,
+        "url": "/portfolio",
+        "title": "Portfolio"
+      },
+      {
+        "id": 3,
+        "url": "/casestudies",
+        "title": "Případové studie"
+      },
+      {
+        "id": 4,
+        "url": "/contact",
+        "title": "Kontakt"
+      }
+    ],
+    "home": {
+      "title": "Home",
+      "link": "/"
+    },
+    "button": {
+      "title": "Poptávka",
+      "link": "/poptavka"
+    }
+  },
+  "hero": {
+    "title": "Případové studie",
+    "button": "Nenašli jste co ste hledali?",
+    "headerBackground": "https://st3.depositphotos.com/11124126/34955/v/600/depositphotos_349552212-stock-video-view-on-big-sheet-of.mp4"
+  }
+}
