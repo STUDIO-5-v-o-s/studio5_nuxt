@@ -20,8 +20,8 @@
           </b-nav-item>
         </div>
         <CustomButton
-          :title="data.header.button"
-          href="/"
+          :title="data.header.button.title"
+          :href="data.header.button.link"
         />
       </b-navbar-nav>
     </b-collapse>
