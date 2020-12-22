@@ -22,6 +22,10 @@
         "title": "Kontakt"
       }
     ],
+    "home": {
+      "title": "Home",
+      "link": "/"
+    },
     "button": {
       "title": "Poptávka",
       "link": "/poptavka"

@@ -1,12 +1,22 @@
 <template>
-  <b-navbar id="scroll" toggleable="lg" class="navbar">
-    <b-navbar-brand href="/">
-      <Logo class="navbar__logo" secondary />
+  <b-navbar
+    id="scroll"
+    toggleable="lg"
+    class="navbar"
+  >
+    <b-navbar-brand :href="data.header.home.link">
+      <Logo
+        class="navbar__logo"
+        secondary
+      />
     </b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse" />
 
-    <b-collapse id="nav-collapse" is-nav>
+    <b-collapse
+      id="nav-collapse"
+      is-nav
+    >
       <b-navbar-nav class="ml-auto navbar__links">
         <div
           v-for="item in data.header.links"
