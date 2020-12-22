@@ -9,6 +9,16 @@
     />
 
     <!--
+    <video
+      src="https://st3.depositphotos.com/11124126/34955/v/600/depositphotos_349552212-stock-video-view-on-big-sheet-of.mp4"
+      autoplay
+      loop
+      playsinline
+      muted
+    />
+    -->
+
+    <!--
     <img
       src="~/assets/images/fakeapi/fakeapi.jpg"
       srcset="~/assets/images/fakeapi/fakeapi.jpg 1x, ~/assets/images/fakeapi/fakeapi.jpg 2x"
