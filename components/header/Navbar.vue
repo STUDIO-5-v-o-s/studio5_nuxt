@@ -1,12 +1,22 @@
 <template>
-  <b-navbar toggleable="lg" class="navbar">
-    <b-navbar-brand href="/">
-      <Logo class="navbar__logo" secondary />
+  <b-navbar
+    id="scroll"
+    toggleable="lg"
+    class="navbar"
+  >
+    <b-navbar-brand :href="data.header.home.link">
+      <Logo
+        class="navbar__logo"
+        secondary
+      />
     </b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse" />
 
-    <b-collapse id="nav-collapse" is-nav>
+    <b-collapse
+      id="nav-collapse"
+      is-nav
+    >
       <b-navbar-nav class="ml-auto navbar__links">
         <div
           v-for="item in data.header.links"
@@ -20,8 +30,8 @@
           </b-nav-item>
         </div>
         <CustomButton
-          :title="data.header.button"
-          href="/"
+          :title="data.header.button.title"
+          :href="data.header.button.link"
         />
       </b-navbar-nav>
     </b-collapse>
@@ -36,6 +46,22 @@ export default {
     return {
       data
     }
+  },
+
+  mounted () {
+    this.$nextTick(function () {
+      window.addEventListener('scroll', function () {
+        const navbar = document.getElementById('scroll')
+        const navClasses = navbar.classList
+        if (document.documentElement.scrollTop >= 150) {
+          if (navClasses.contains('resize') === false) {
+            navClasses.toggle('resize')
+          }
+        } else if (navClasses.contains('resize') === true) {
+          navClasses.toggle('resize')
+        }
+      })
+    })
   }
 }
 </script>
@@ -118,6 +144,14 @@ export default {
         background-image: url('~assets/images/icons/primary/burger.svg');
       }
     }
+  }
+}
+
+.resize {
+  .navbar__logo {
+    width: 8rem;
+
+    @include scrollHeader(.6s);
   }
 }
 </style>

@@ -22,7 +22,14 @@
         "title": "Kontakt"
       }
     ],
-    "button": "Poptávka"
+    "home": {
+      "title": "Home",
+      "link": "/"
+    },
+    "button": {
+      "title": "Poptávka",
+      "link": "/poptavka"
+    }
   },
   "hero": {
     "title": "Kreativní reklamní agentura",
