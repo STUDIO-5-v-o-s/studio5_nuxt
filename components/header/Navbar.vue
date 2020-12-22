@@ -1,6 +1,6 @@
 <template>
   <b-navbar toggleable="lg" class="navbar">
-    <b-navbar-brand href="#">
+    <b-navbar-brand href="/">
       <Logo class="navbar__logo" secondary />
     </b-navbar-brand>
 
