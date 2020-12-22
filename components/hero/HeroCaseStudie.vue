@@ -67,6 +67,7 @@ export default {
   width: 100%;
   height: 40vh;
   object-fit: cover;
+  z-index: 0;
 
   @include media-breakpoint-down(sm) {
     width: 100%;

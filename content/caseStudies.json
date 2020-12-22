@@ -1,35 +1,26 @@
 {
   "caseStudies": {
-    "links": [
+    "items": [
       {
         "id": 1,
-        "url": "/services",
-        "title": "Služby"
+        "href": "/casestudies/walteco",
+        "title": "Firemní identita",
+        "client": "Walteco s.r.o.",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sagittis hendrerit ante. Duis pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "image": "~/assets/images/fakeapi/fakeapi.jpg",
+        "image@2x": "~/assets/images/fakeapi/fakeapi@2x.jpg"
       },
       {
         "id": 2,
-        "url": "/portfolio",
-        "title": "Portfolio"
-      },
-      {
-        "id": 3,
-        "url": "/casestudies",
-        "title": "Případové studie"
-      },
-      {
-        "id": 4,
-        "url": "/contact",
-        "title": "Kontakt"
+        "href": "/casestudies/euronaradi",
+        "title": "Branding a reklamní tiskoviny",
+        "client": "Euronářadí s.r.o.",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sagittis hendrerit ante. Duis pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "image": "~/assets/images/fakeapi/fakeapi.jpg",
+        "image@2x": "~/assets/images/fakeapi/fakeapi@2x.jpg"
       }
     ],
-    "home": {
-      "title": "Home",
-      "link": "/"
-    },
-    "button": {
-      "title": "Poptávka",
-      "link": "/poptavka"
-    }
+    "showMore": "Zobrazit studii"
   },
   "hero": {
     "title": "Případové studie",
