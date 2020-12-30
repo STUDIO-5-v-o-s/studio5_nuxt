@@ -1,7 +1,7 @@
 <template>
-  <div class="caseStudiesItem">
-    <b-row cols="2">
-      <b-col class="caseStudiesItem__content">
+  <div class="caseItem">
+    <b-row cols="2" class="d-flex align-items-center">
+      <b-col class="caseItem__content">
         <h3>
           {{ title }}
         </h3>
@@ -17,16 +17,17 @@
         <CustomButton
           :title="data.caseStudies.showMore"
           :href="href"
-          class="caseStudiesItem__button"
+          class="caseItem__content--button"
           secondary
         />
       </b-col>
 
-      <b-col class="caseStudiesItem__image">
-        <img
-          :src="image"
+      <b-col class="caseItem__image">
+        <b-img
+          :src="image1x"
+          :srcset="image2x"
           :alt="title"
-        >
+        />
       </b-col>
     </b-row>
   </div>
@@ -68,12 +69,21 @@ export default {
     return {
       data
     }
+  },
+
+  computed: {
+    image1x () {
+      return `_nuxt/assets/images/fakeapi/${this.image}.jpg`
+    },
+    image2x () {
+      return `_nuxt/assets/images/fakeapi/${this.image}@2x.jpg`
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.caseStudiesItem {
+.caseItem {
   padding: 0;
 
   &__content {
@@ -81,14 +91,22 @@ export default {
       font-size: 1.25rem;
       color: $primary;
     }
+
+    &--button {
+      margin-top: 1rem;
+    }
   }
 
   &__image {
-    width: 100%;
-  }
+    width: 28rem;
+    height: 17rem;
 
-  &__button {
-    margin-top: 1rem;
+    img {
+      float: right;
+      width: 28rem;
+      height: 17rem;
+      object-fit: cover;
+    }
   }
 }
 </style>

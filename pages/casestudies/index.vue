@@ -2,7 +2,7 @@
   <div class="caseStudies">
     <HeroCaseStudie />
 
-    <b-container class="caseStudies__content">
+    <b-container class="caseStudies__content overflow-auto">
       <b-row
         v-for="item in data.caseStudies.items"
         :key="item.id"
@@ -10,7 +10,7 @@
         class="caseStudies__item"
       >
         <b-col>
-          <CaseStudiesItem
+          <CaseItem
             :title="item.title"
             :client="item.client"
             :description="item.description"
@@ -29,7 +29,7 @@ import data from '@/content/caseStudies.json'
 export default {
   components: {
     HeroCaseStudie: () => import('~/components/hero/HeroCaseStudie'),
-    CaseStudiesItem: () => import('~/components/caseStudies/CaseStudiesItem')
+    CaseItem: () => import('@/components/caseStudies/caseItem')
   },
 
   data () {

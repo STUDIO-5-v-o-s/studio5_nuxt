@@ -7,8 +7,7 @@
         "title": "Firemní identita",
         "client": "Walteco s.r.o.",
         "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sagittis hendrerit ante. Duis pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-        "image": "~/assets/images/fakeapi/fakeapi.jpg",
-        "image@2x": "~/assets/images/fakeapi/fakeapi@2x.jpg"
+        "image": "fakeApi"
       },
       {
         "id": 2,
@@ -16,8 +15,7 @@
         "title": "Branding a reklamní tiskoviny",
         "client": "Euronářadí s.r.o.",
         "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sagittis hendrerit ante. Duis pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-        "image": "~/assets/images/fakeapi/fakeapi.jpg",
-        "image@2x": "~/assets/images/fakeapi/fakeapi@2x.jpg"
+        "image": "fakeApi_1"
       }
     ],
     "showMore": "Zobrazit studii"
