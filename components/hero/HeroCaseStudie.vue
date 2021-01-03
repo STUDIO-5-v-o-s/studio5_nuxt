@@ -13,8 +13,8 @@
 
     <!--
     <img
-      src="~/assets/images/fakeapi/fakeapi.jpg"
-      srcset="~/assets/images/fakeapi/fakeapi.jpg 1x, ~/assets/images/fakeapi/fakeapi.jpg 2x"
+      :src="image1x"
+      :srcset="image2x"
       alt="fakeapi"
     >
     -->
@@ -54,6 +54,15 @@ export default {
   data () {
     return {
       data
+    }
+  },
+
+  computed: {
+    image1x () {
+      return `_nuxt/assets/images/fakeapi/${this.image}.jpg`
+    },
+    image2x () {
+      return `_nuxt/assets/images/fakeapi/${this.image}@2x.jpg`
     }
   }
 }
