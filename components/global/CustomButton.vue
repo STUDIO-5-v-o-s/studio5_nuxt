@@ -10,12 +10,22 @@
   >
     <template v-if="icon">
       <div class="custom-button__box">
-        <img
-          :src="require(`~/assets/images/icons/white/${icon}.svg`)"
-          title=""
-          :alt="icon"
-          class="custom-button__box--icon"
-        >
+        <template v-if="bootstrap">
+          <b-icon
+            class="custom-button__box--bicon"
+            :icon="icon"
+            :style="{ color: `#fff` }"
+          />
+        </template>
+
+        <template v-else>
+          <img
+            :src="require(`~/assets/images/icons/white/${icon}.svg`)"
+            title=""
+            :alt="icon"
+            class="custom-button__box--icon"
+          >
+        </template>
 
         <div class="custom-button__box--title">
           {{ title }}
@@ -78,6 +88,11 @@ export default {
       type: Boolean,
       required: false,
       default: false
+    },
+    bootstrap: {
+      type: Boolean,
+      required: false,
+      default: false
     }
   },
 
@@ -118,6 +133,12 @@ export default {
     display: inline-flex;
 
     &--icon {
+      display: inline-flex;
+      width: 1rem;
+    }
+
+    &--bicon {
+      margin-top: .3rem;
       display: inline-flex;
       width: 1rem;
     }
