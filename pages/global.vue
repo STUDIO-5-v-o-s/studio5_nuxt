@@ -100,6 +100,43 @@
     </div>
 
     <div class="py-2">
+      <b-row class="pb-3 d-flex justify-content-center">
+        <CustomImage
+          image="fakeApi"
+          width="600"
+          height="200"
+          class="mr-2"
+        />
+
+        <CustomImage
+          image="fakeApi_1"
+          width="200"
+          height="150"
+          class="mr-2"
+        />
+
+        <CustomImage
+          image="fakeApi"
+          width="100"
+          height="100"
+          class="mr-2"
+        />
+
+        <CustomImage
+          image="fakeApi"
+          width="70"
+          height="70"
+          class="mr-2"
+        />
+      </b-row>
+      <b-row>
+        <CustomImage
+          image="fakeApi"
+        />
+      </b-row>
+    </div>
+
+    <div class="py-2">
       <b-row cols="2" class="pt-3">
         <b-col>
           <CustomInput
