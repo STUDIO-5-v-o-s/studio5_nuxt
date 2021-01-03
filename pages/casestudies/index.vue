@@ -5,7 +5,11 @@
     <b-container class="caseStudies__content overflow-auto">
       <b-row
         v-for="item in data.caseStudies.items"
+        id="case"
         :key="item.id"
+        :items="item in data.caseStudies.items"
+        :per-page="perPage"
+        :current-page="currentPage"
         cols="1"
         class="caseStudies__item"
       >
@@ -20,6 +24,17 @@
         </b-col>
       </b-row>
     </b-container>
+
+    <b-pagination
+      v-model="currentPage"
+      :total-rows="rows"
+      :per-page="perPage"
+      aria-controls="case"
+      first-number
+      last-number
+      align="center"
+      class="pagination"
+    />
   </div>
 </template>
 
@@ -34,7 +49,15 @@ export default {
 
   data () {
     return {
-      data
+      data,
+      perPage: 2,
+      currentPage: 1
+    }
+  },
+
+  computed: {
+    rows () {
+      return this.data.caseStudies.items.length
     }
   }
 }
@@ -74,5 +97,9 @@ export default {
       border: none;
     }
   }
+}
+
+.pagination {
+  padding: 3rem 0;
 }
 </style>

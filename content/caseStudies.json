@@ -16,6 +16,14 @@
         "client": "Euronářadí s.r.o.",
         "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sagittis hendrerit ante. Duis pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
         "image": "fakeApi_1"
+      },
+      {
+        "id": 3,
+        "href": "/casestudies/euronaradi",
+        "title": "Branding a reklamní tiskoviny",
+        "client": "Euronářadí s.r.o.",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sagittis hendrerit ante. Duis pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "image": "fakeApi_1"
       }
     ],
     "showMore": "Zobrazit studii"
