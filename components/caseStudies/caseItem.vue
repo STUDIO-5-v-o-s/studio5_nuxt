@@ -24,8 +24,9 @@
 
       <b-col class="caseItem__image">
         <b-img
+          ref="image"
           :src="image1x"
-          :srcset="image2x"
+          :srcset="`${image1x} 1x, ${image2x} 2x`"
           :alt="title"
         />
       </b-col>
@@ -73,10 +74,10 @@ export default {
 
   computed: {
     image1x () {
-      return `_nuxt/assets/images/fakeapi/${this.image}.jpg`
+      return require(`~/assets/images/fakeapi/${this.image}.jpg`)
     },
     image2x () {
-      return `_nuxt/assets/images/fakeapi/${this.image}@2x.jpg`
+      return require(`~/assets/images/fakeapi/${this.image}@2x.jpg`)
     }
   }
 }
