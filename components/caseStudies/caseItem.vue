@@ -1,14 +1,16 @@
 <template>
   <div class="caseItem">
-    <b-row cols="2" class="d-flex align-items-center">
+    <b-row cols-md="2" cols="1" class="d-flex flex-column flex-md-row flex-column-reverse align-items-center">
       <b-col class="caseItem__content">
-        <h3>
-          {{ title }}
-        </h3>
+        <div class="caseItem__content--heading d-none d-md-block">
+          <h3>
+            {{ title }}
+          </h3>
 
-        <h4 class="pb-2">
-          {{ client }}
-        </h4>
+          <h4 class="pb-2">
+            {{ client }}
+          </h4>
+        </div>
 
         <p>
           {{ description }}
@@ -23,12 +25,23 @@
       </b-col>
 
       <b-col class="caseItem__image">
-        <b-img
+        <img
           ref="image"
           :src="image1x"
           :srcset="`${image1x} 1x, ${image2x} 2x`"
           :alt="title"
-        />
+        >
+        <div class="overlay d-block d-md-none">
+          <div class="caseItem__content--heading">
+            <h3>
+              {{ title }}
+            </h3>
+
+            <h4 class="pb-2">
+              {{ client }}
+            </h4>
+          </div>
+        </div>
       </b-col>
     </b-row>
   </div>
@@ -88,13 +101,34 @@ export default {
   padding: 0;
 
   &__content {
-    h4 {
-      font-size: 1.25rem;
-      color: $primary;
+    &--heading {
+      @include media-breakpoint-down(sm) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 0 1.5rem;
+        z-index: 1;
+        color: #fff;
+      }
+
+      h4 {
+        font-size: 1.25rem;
+        color: $primary;
+      }
+    }
+
+    p {
+      @include media-breakpoint-down(sm) {
+        padding-top: 1rem;
+      }
     }
 
     &--button {
       margin-top: 1rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 0 2rem;
     }
   }
 
@@ -102,12 +136,30 @@ export default {
     width: 28rem;
     height: 17rem;
 
+    @include media-breakpoint-down(sm) {
+      height: 15rem;
+      margin-bottom: 1rem;
+      z-index: 0;
+    }
+
     img {
       float: right;
       width: 28rem;
       height: 17rem;
       object-fit: cover;
+
+      @include media-breakpoint-down(sm) {
+        height: 15rem;
+      }
     }
   }
+}
+
+.overlay {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: rgb(21, 34, 49, .6);
+  background: linear-gradient(0deg, rgba(21, 34, 49, 1) 10%, rgba(255, 255, 255, 0) 100%);
 }
 </style>
