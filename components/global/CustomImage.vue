@@ -1,7 +1,8 @@
 <template>
   <img
-    :src="require(`~/assets/images${folder}/${image}.jpg`)"
-    :srcset="`~/assets/images${folder}/${image}.jpg 1x, ~/assets/images${folder}/${image}@2x.jpg 2x`"
+    ref="image"
+    :src="image1x"
+    :srcset="`${image1x} 1x, ${image2x} 2x`"
     :alt="image"
     :width="width"
     :height="height"
@@ -20,7 +21,7 @@ export default {
     folder: {
       type: String,
       required: false,
-      default: '/fakeapi'
+      default: 'fakeapi'
     },
     href: {
       type: String,
@@ -49,6 +50,13 @@ export default {
       return {
         'effect--grayscale': this.grayscale
       }
+    },
+
+    image1x () {
+      return require(`~/assets/images/${this.folder}/${this.image}.jpg`)
+    },
+    image2x () {
+      return require(`~/assets/images/${this.folder}/${this.image}@2x.jpg`)
     }
   }
 }
