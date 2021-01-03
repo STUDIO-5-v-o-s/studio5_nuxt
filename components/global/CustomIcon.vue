@@ -1,12 +1,24 @@
 <template>
-  <img
-    :src="require(`~/assets/images/icons${color}/${name}.svg`)"
-    title=""
-    :alt="name"
-    :width="width"
+  <div
     class="custom-icon"
     :class="{ 'custom-icon--background': background }"
   >
+    <template v-if="bootstrap">
+      <b-icon
+        :icon="name"
+        :font-scale="scale"
+        :style="{ color: `${color}` }"
+      />
+    </template>
+
+    <template v-else>
+      <img
+        :src="require(`~/assets/images/icons${color}/${name}.svg`)"
+        :alt="name"
+        :width="width"
+      >
+    </template>
+  </div>
 </template>
 
 <script>
@@ -35,6 +47,16 @@ export default {
       type: String,
       required: false,
       default: '24'
+    },
+    scale: {
+      type: String,
+      required: false,
+      default: '1'
+    },
+    bootstrap: {
+      type: Boolean,
+      required: false,
+      default: false
     }
   }
 }

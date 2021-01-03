@@ -1,0 +1,36 @@
+{
+  "caseStudies": {
+    "items": [
+      {
+        "id": 1,
+        "href": "/casestudies/walteco",
+        "title": "Firemní identita",
+        "client": "Walteco s.r.o.",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sagittis hendrerit ante. Duis pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "image": "fakeApi"
+      },
+      {
+        "id": 2,
+        "href": "/casestudies/euronaradi",
+        "title": "Branding a reklamní tiskoviny",
+        "client": "Euronářadí s.r.o.",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sagittis hendrerit ante. Duis pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "image": "fakeApi_1"
+      },
+      {
+        "id": 3,
+        "href": "/casestudies/euronaradi",
+        "title": "Branding a reklamní tiskoviny",
+        "client": "Euronářadí s.r.o.",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sagittis hendrerit ante. Duis pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "image": "fakeApi_1"
+      }
+    ],
+    "showMore": "Zobrazit studii"
+  },
+  "hero": {
+    "title": "Případové studie",
+    "button": "Nenašli jste co ste hledali?",
+    "headerBackground": "https://st3.depositphotos.com/11124126/34955/v/600/depositphotos_349552212-stock-video-view-on-big-sheet-of.mp4"
+  }
+}

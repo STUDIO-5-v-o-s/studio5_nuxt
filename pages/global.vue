@@ -18,6 +18,7 @@
     <p>
       {{ data.typography.p }}
     </p>
+
     <div class="py-2">
       <CustomButton
         title="Button"
@@ -30,6 +31,7 @@
         secondary
       />
     </div>
+
     <div class="py-2">
       <CustomButton
         title="Button"
@@ -44,6 +46,24 @@
         secondary
       />
     </div>
+
+    <div class="py-2">
+      <CustomButton
+        title="Button"
+        :href="data.links.testLink"
+        icon="arrow-down-circle-fill"
+        bootstrap
+        primary
+      />
+      <CustomButton
+        title="Button"
+        :href="data.links.testLink"
+        icon="arrow-down-circle-fill"
+        bootstrap
+        secondary
+      />
+    </div>
+
     <div class="py-2">
       <CustomButton
         title="Button"
@@ -57,18 +77,28 @@
         secondary
       />
     </div>
+
     <div class="py-2">
       <CustomIcon name="add-file" />
       <CustomIcon name="add-file" width="64" />
       <CustomIcon name="add-file" color="/primary" />
       <CustomIcon name="add-file" color="/white" background />
     </div>
+
+    <div class="py-2">
+      <CustomIcon name="arrow-down-circle-fill" bootstrap />
+      <CustomIcon name="arrow-down-circle-fill" scale="1.5" bootstrap />
+      <CustomIcon name="arrow-down-circle-fill" color="#e91e63" bootstrap />
+      <CustomIcon name="arrow-down-circle-fill" color="white" background bootstrap />
+    </div>
+
     <div class="py-2">
       <CustomBadge title="Badge" />
       <CustomBadge title="Badge" secondary />
       <CustomBadge title="Badge" green />
       <CustomBadge title="Badge" white />
     </div>
+
     <div class="py-2">
       <b-row cols="2" class="pt-3">
         <b-col>
