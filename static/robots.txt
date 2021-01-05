@@ -1,0 +1,5 @@
+Sitemap: https://patrikvadura.cz/sitemap.xml
+
+# global
+User-agent: *
+Disallow: /
