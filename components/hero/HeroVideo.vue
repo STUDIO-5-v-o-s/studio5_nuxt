@@ -43,11 +43,11 @@
           <div class="hero__actions d-flex align-items-center flex-md-row flex-column">
             <CustomButton
               :title="blok.button_1"
-              :href="blok.button_1_link"
+              href="/portfolio"
             />
             <CustomButton
               :title="blok.button_2"
-              :href="blok.button_2_link"
+              href="/casestudie"
               icon="cinema"
               class="ml-1"
               light

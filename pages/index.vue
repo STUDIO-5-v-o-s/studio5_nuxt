@@ -5,6 +5,7 @@
       v-if="story.content.component"
       :key="story.content._uid"
       :blok="story.content"
+      class="p-0"
     />
   </div>
 </template>
