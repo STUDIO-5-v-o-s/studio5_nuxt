@@ -1,7 +1,7 @@
 <template>
   <b-container fluid class="p-0 m-0 hero">
     <video
-      src="https://st4.depositphotos.com/24158806/27894/v/600/depositphotos_278945248-stock-video-beautiful-minimal-background-with-moving.mp4"
+      :src="blok.video"
       autoplay
       loop
       playsinline
@@ -30,21 +30,24 @@
       <b-col
         class="px-4 text-center"
       >
-        <div class="d-flex align-items-center flex-column">
+        <div
+          v-editable="blok"
+          class="d-flex align-items-center flex-column"
+        >
           <h1>
-            {{ data.hero.title }}
+            {{ blok.headline }}
           </h1>
           <p>
-            {{ data.hero.description }}
+            {{ blok.description }}
           </p>
           <div class="hero__actions d-flex align-items-center flex-md-row flex-column">
             <CustomButton
-              :title="data.hero.button_1"
-              href="/portfolio"
+              :title="blok.button_1"
+              :href="blok.button_1_link"
             />
             <CustomButton
-              :title="data.hero.button_2"
-              href="/casestudies"
+              :title="blok.button_2"
+              :href="blok.button_2_link"
               icon="cinema"
               class="ml-1"
               light
@@ -57,15 +60,14 @@
 </template>
 
 <script>
-import data from '~/content/cs.json'
-
 export default {
   components: {
   },
 
-  data () {
-    return {
-      data
+  props: {
+    blok: {
+      type: Object,
+      required: true
     }
   }
 }

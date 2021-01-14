@@ -41,7 +41,8 @@ export default {
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     '~plugins/GlobalComponents',
-    '~plugins/bootstrap-vue'
+    '~plugins/bootstrap-vue',
+    '~/plugins/components'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -61,7 +62,14 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    // Doc: https://github.com/storyblok/storyblok-nuxt
+    ['storyblok-nuxt',
+      {
+        accessToken: 'MJrgsxkYkXiDgLSekjBKIgtt',
+        cacheProvider: 'memory'
+      }
+    ]
   ],
 
   bootstrapVue: {
