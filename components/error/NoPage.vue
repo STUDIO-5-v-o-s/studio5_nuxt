@@ -70,6 +70,7 @@ export default {
     background-image: url("~assets/images/error/404-error.gif");
     height: 23rem;
     background-position: center;
+    background-repeat: no-repeat;
   }
 }
 </style>
