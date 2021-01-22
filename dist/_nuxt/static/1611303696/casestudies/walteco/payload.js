@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/casestudies/walteco", {data:[{}],fetch:[],mutations:void 0});
