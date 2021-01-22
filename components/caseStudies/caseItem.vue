@@ -16,12 +16,13 @@
           {{ description }}
         </p>
 
-        <CustomButton
-          :title="data.caseStudies.showMore"
-          :href="href"
-          class="caseItem__content--button"
-          secondary
-        />
+        <div class="caseItem__content--button">
+          <CustomButton
+            :title="data.caseStudies.showMore"
+            :href="href"
+            secondary
+          />
+        </div>
       </b-col>
 
       <b-col class="caseItem__image">
@@ -106,13 +107,18 @@ export default {
         position: absolute;
         bottom: 0;
         left: 0;
-        padding: 0 1.5rem;
+        padding: 0 1rem;
         z-index: 1;
         color: #fff;
       }
 
+      h3 {
+        font-size: 1.4rem;
+        line-height: 2rem;
+      }
+
       h4 {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
         color: $primary;
       }
     }
@@ -125,6 +131,18 @@ export default {
 
     &--button {
       margin-top: 1rem;
+
+      ::v-deep .custom-button {
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+        }
+
+        .custom-button__title {
+          @include media-breakpoint-down(sm) {
+            width: 100%;
+          }
+        }
+      }
     }
 
     @include media-breakpoint-down(sm) {
@@ -136,8 +154,10 @@ export default {
     width: 28rem;
     height: 17rem;
 
+    @include border-radius (1rem);
+
     @include media-breakpoint-down(sm) {
-      height: 15rem;
+      height: 12rem;
       margin-bottom: 1rem;
       z-index: 0;
     }
@@ -148,8 +168,10 @@ export default {
       height: 17rem;
       object-fit: cover;
 
+      @include border-radius (1rem);
+
       @include media-breakpoint-down(sm) {
-        height: 15rem;
+        height: 12rem;
       }
     }
   }
@@ -161,5 +183,7 @@ export default {
   width: 100%;
   background: rgb(21, 34, 49, .6);
   background: linear-gradient(0deg, rgba(21, 34, 49, 1) 10%, rgba(255, 255, 255, 0) 100%);
+
+  @include border-radius (1rem);
 }
 </style>
