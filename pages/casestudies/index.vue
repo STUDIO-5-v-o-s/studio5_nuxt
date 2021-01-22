@@ -51,13 +51,27 @@ export default {
     return {
       data,
       perPage: 2,
-      currentPage: 1
+      currentPage: 1,
+      title: 'Případové studie | STUDIO 5'
     }
   },
 
   computed: {
     rows () {
       return this.data.caseStudies.items.length
+    }
+  },
+
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Prohlédněte si ukázky našich prací v přehledně zpracovaných případových studiích a poznejte kvalitu a důkladnost našich referencí.'
+        }
+      ]
     }
   }
 }
