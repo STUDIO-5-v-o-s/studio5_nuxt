@@ -18,19 +18,17 @@
       is-nav
     >
       <b-navbar-nav class="ml-auto navbar__links">
-        <b-navbar-nav class="ml-auto navbar__links">
-          <div
-            v-for="item in $t('global.header.navLinks')"
-            :key="item.id"
+        <div
+          v-for="item in $t('global.header.navLinks')"
+          :key="item.id"
+        >
+          <b-nav-item
+            :to="localePath(item.href)"
+            active-class="active"
           >
-            <b-nav-item
-              :to="localePath(item.href)"
-              active-class="active"
-            >
-              {{ item.title }}
-            </b-nav-item>
-          </div>
-        </b-navbar-nav>
+            {{ item.title }}
+          </b-nav-item>
+        </div>
 
         <CustomButton
           :title="$t('global.header.button.title')"
@@ -83,61 +81,94 @@ export default {
 
   &__links {
     @include media-breakpoint-down(md) {
-      margin-top: 2rem;
+      margin: 2rem 0;
       padding: 1rem 2rem;
-      background: $light;
+      text-align: center;
 
       @include border-radius (1rem);
-    }
-
-    @include media-breakpoint-down(sm) {
-      text-align: center;
     }
   }
 
   &__lang {
     margin-left: 1rem;
 
+    @include media-breakpoint-down(md) {
+      margin: 1rem 0 1rem 0;
+    }
+
     ::v-deep .custom-select {
-      text-align: center;
+      text-align-last: center;
       margin: 0;
       padding: .25rem 1rem;
       background: $light;
       font-size: .9rem;
-      color: $primary;
+      color: #fff;
       border: none;
-      border-radius: 1rem;
       cursor: pointer;
+
+      @include border-radius (.5rem);
 
       &::after {
         color: #fff;
       }
     }
 
-    ::v-deep option {
+    option {
       text-align: center;
       color: #1d1d1d;
     }
   }
 
-  .navbar-nav .nav-link {
-    color: #fff;
-    font-size: .9rem;
-    font-weight: 700;
-    transition: all 300ms ease-in-out;
-
-    &:hover,
-    &.active {
-      margin: 0 .25rem;
-      padding: .5rem 1rem;
-      background: $light;
-      color: $primary;
-
-      @include border-radius (.5rem);
+  ::v-deep .navbar {
+    &-collapse {
+      height: 100vh;
+      overflow: scroll;
     }
 
-    &.active {
-      color: #fff !important;
+    &-nav .nav-link {
+      color: #fff;
+      font-size: .9rem;
+      font-weight: 700;
+      transition: all 300ms ease-in-out;
+
+      &:hover,
+      &.active {
+        margin: 0 .25rem;
+        padding: .5rem 1rem;
+        background: $light;
+        color: $primary;
+
+        @include border-radius (.5rem);
+      }
+
+      &.active {
+        color: #fff !important;
+      }
+    }
+
+    &-toggler {
+      padding: 1rem 1.25rem;
+      background: $light;
+      border: none;
+
+      @include border-radius (.5rem);
+
+      &:focus,
+      &:hover {
+        border: none;
+        text-decoration: none;
+      }
+
+      &-icon {
+        display: inline-block;
+        width: 1.25rem;
+        background-image: url('~assets/images/icons/white/burger.svg');
+        vertical-align: middle;
+
+        &:active {
+          background-image: url('~assets/images/icons/primary/burger.svg');
+        }
+      }
     }
   }
 
@@ -145,7 +176,7 @@ export default {
     margin-left: 1rem;
 
     @include media-breakpoint-down(md) {
-      margin-top: 1rem;
+      margin-top: 3rem;
       margin-left: 0;
     }
 
@@ -157,31 +188,6 @@ export default {
 
     &:hover {
       background: $light;
-    }
-  }
-
-  ::v-deep .navbar-toggler {
-    padding: 1rem 1.25rem;
-    background: $light;
-    border: none;
-
-    @include border-radius (.5rem);
-
-    &:focus,
-    &:hover {
-      border: none;
-      text-decoration: none;
-    }
-
-    &-icon {
-      display: inline-block;
-      width: 1.25rem;
-      background-image: url('~assets/images/icons/white/burger.svg');
-      vertical-align: middle;
-
-      &:active {
-        background-image: url('~assets/images/icons/primary/burger.svg');
-      }
     }
   }
 }
