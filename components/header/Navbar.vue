@@ -75,6 +75,10 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
+  @include media-breakpoint-down(sm) {
+    overflow: hidden;
+  }
+
   &__logo {
     width: 10rem;
   }
@@ -121,10 +125,12 @@ export default {
   }
 
   ::v-deep .navbar {
+    overflow-y: hidden;
+
     &-collapse {
       @include media-breakpoint-down(sm) {
+        overflow-y: hidden;
         height: 100vh;
-        overflow: scroll;
       }
     }
 
@@ -207,5 +213,9 @@ export default {
     background: $light;
     border: none;
   }
+}
+
+.lock-scroll {
+  overflow: hidden;
 }
 </style>
