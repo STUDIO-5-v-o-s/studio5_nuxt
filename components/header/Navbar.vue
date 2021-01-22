@@ -102,6 +102,7 @@ export default {
       padding: .25rem 1rem;
       background: $light;
       font-size: .9rem;
+      font-weight: 600;
       color: #fff;
       border: none;
       cursor: pointer;
@@ -121,8 +122,10 @@ export default {
 
   ::v-deep .navbar {
     &-collapse {
-      height: 100vh;
-      overflow: scroll;
+      @include media-breakpoint-down(sm) {
+        height: 100vh;
+        overflow: scroll;
+      }
     }
 
     &-nav .nav-link {
