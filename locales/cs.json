@@ -1,0 +1,91 @@
+{
+  "global": {
+    "home": "Domů",
+    "header": {
+      "navLinks": [
+        {
+          "id": 1,
+          "href": "global",
+          "title": "Služby"
+        },
+        {
+          "id": 2,
+          "href": "global",
+          "title": "Portfolio"
+        },
+        {
+          "id": 3,
+          "href": "/casestudies",
+          "title": "Případové studie"
+        },
+        {
+          "id": 4,
+          "href": "global",
+          "title": "Kontakt"
+        }
+      ],
+      "button": {
+        "href": "contact",
+        "title": "Poptávka"
+      },
+      "lang": {
+        "cs": "Čeština",
+        "sk": "Slovenština"
+      }
+    },
+    "hero": {
+      "title": "Kreativní reklamní agentura",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam sed tellus id magna elementum tincidunt. Integer lacinia.",
+      "button_1": "Portfolio",
+      "button_2": "Případové studie",
+      "buttonBack": "Zpět na přehled",
+      "caseStudies": {
+        "title": "Případové studie",
+        "DontFind": "Nenašli jste co ste hledali?"
+      }
+    },
+    "caseStudies": {
+      "items": [
+        {
+          "id": 1,
+          "href": "/casestudies/walteco",
+          "title": "Firemní identita",
+          "client": "Walteco s.r.o.",
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sagittis hendrerit ante. Duis pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+          "image": "fakeApi"
+        },
+        {
+          "id": 2,
+          "href": "/casestudies",
+          "title": "Branding a reklamní tiskoviny",
+          "client": "Euronářadí s.r.o.",
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sagittis hendrerit ante. Duis pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+          "image": "fakeApi_1"
+        },
+        {
+          "id": 3,
+          "href": "/casestudies",
+          "title": "Branding a reklamní tiskoviny",
+          "client": "Euronářadí s.r.o.",
+          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sagittis hendrerit ante. Duis pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+          "image": "fakeApi_1"
+        }
+      ],
+      "walteco": {
+        "client": "Walteco",
+        "title": "Firemní identita",
+        "subtitle": "Subtitle",
+        "headerImage": "fakeApi"
+      }
+    },
+    "error": {
+      "title": "404",
+      "subtitle": "Vypadá to, že jste se ztratili",
+      "goBack": "Zpět",
+      "goHome": "Zpět na úvodní stránku"
+    },
+    "copyrightMessage": "Copyright: All Rights Reserved { name }",
+    "apple": "žádné jablka | jedno jablko | {count} jablek",
+    "banana": "žádné banány | {n} banán | {n} banánů"
+  }
+}

@@ -4,7 +4,7 @@
     toggleable="lg"
     class="navbar"
   >
-    <b-navbar-brand :href="data.header.home.link">
+    <b-navbar-brand :to="localePath('/')">
       <Logo
         class="navbar__logo"
         secondary
@@ -18,36 +18,45 @@
       is-nav
     >
       <b-navbar-nav class="ml-auto navbar__links">
-        <div
-          v-for="item in data.header.links"
-          :key="item.id"
-        >
-          <b-nav-item
-            :posts="item.title"
-            :href="item.url"
+        <b-navbar-nav class="ml-auto navbar__links">
+          <div
+            v-for="item in $t('global.header.navLinks')"
+            :key="item.id"
           >
-            {{ item.title }}
-          </b-nav-item>
-        </div>
+            <b-nav-item
+              :to="localePath(item.href)"
+              active-class="active"
+            >
+              {{ item.title }}
+            </b-nav-item>
+          </div>
+        </b-navbar-nav>
+
         <CustomButton
-          :title="data.header.button.title"
-          :href="data.header.button.link"
+          :title="$t('global.header.button.title')"
+          :href="$t('global.header.button.href')"
         />
+
+        <div class="navbar__lang">
+          <b-form-select
+            v-model="$i18n.locale"
+          >
+            <b-form-select-option
+              v-for="lang in $i18n.locales"
+              :key="lang.code"
+              :value="lang.code"
+            >
+              {{ lang.name }}
+            </b-form-select-option>
+          </b-form-select>
+        </div>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
 </template>
 
 <script>
-import data from '~/content/cs.json'
-
 export default {
-  data () {
-    return {
-      data
-    }
-  },
-
   mounted () {
     this.$nextTick(function () {
       window.addEventListener('scroll', function () {
@@ -86,19 +95,49 @@ export default {
     }
   }
 
+  &__lang {
+    margin-left: 1rem;
+
+    ::v-deep .custom-select {
+      text-align: center;
+      margin: 0;
+      padding: .25rem 1rem;
+      background: $light;
+      font-size: .9rem;
+      color: $primary;
+      border: none;
+      border-radius: 1rem;
+      cursor: pointer;
+
+      &::after {
+        color: #fff;
+      }
+    }
+
+    ::v-deep option {
+      text-align: center;
+      color: #1d1d1d;
+    }
+  }
+
   .navbar-nav .nav-link {
-    color: #fff !important;
-    font-size: .9rem !important;
+    color: #fff;
+    font-size: .9rem;
     font-weight: 700;
     transition: all 300ms ease-in-out;
 
-    &:hover {
-      padding-left: 1rem;
-      padding-right: 1rem;
+    &:hover,
+    &.active {
+      margin: 0 .25rem;
+      padding: .5rem 1rem;
       background: $light;
-      color: $primary !important;
+      color: $primary;
 
       @include border-radius (.5rem);
+    }
+
+    &.active {
+      color: #fff !important;
     }
   }
 
@@ -152,6 +191,12 @@ export default {
     width: 8rem;
 
     @include scrollHeader(.6s);
+  }
+
+  .navbar-toggler {
+    padding: .75rem 1rem;
+    background: $light;
+    border: none;
   }
 }
 </style>

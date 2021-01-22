@@ -4,7 +4,7 @@
     class="p-0 m-0 hero"
   >
     <video
-      :src="data.hero.headerBackground"
+      src="https://st3.depositphotos.com/11124126/34955/v/600/depositphotos_349552212-stock-video-view-on-big-sheet-of.mp4"
       autoplay
       loop
       playsinline
@@ -29,12 +29,12 @@
       >
         <div class="d-flex align-items-center flex-column">
           <h1>
-            {{ data.hero.title }}
+            {{ $t('global.hero.caseStudies.title') }}
           </h1>
           <div class="hero__actions d-flex align-items-center flex-md-row flex-column">
             <CustomButton
-              :title="data.hero.button"
-              href="/contact"
+              :title="$t('global.hero.caseStudies.DontFind')"
+              :href="localePath('global')"
               light
             />
           </div>
@@ -45,16 +45,8 @@
 </template>
 
 <script>
-import data from '~/content/caseStudies.json'
-
 export default {
   components: {
-  },
-
-  data () {
-    return {
-      data
-    }
   },
 
   computed: {
