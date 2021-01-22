@@ -24,8 +24,8 @@
           </h1>
           <div class="hero__actions d-flex align-items-center flex-md-row flex-column">
             <CustomButton
-              :title="data.hero.buttonBack"
-              href="/casestudies"
+              :title="$t('global.hero.buttonBack')"
+              :href="localePath('/casestudies')"
               light
             />
           </div>
@@ -36,8 +36,6 @@
 </template>
 
 <script>
-import data from '~/content/caseStudies.json'
-
 export default {
   props: {
     title: {
@@ -49,12 +47,6 @@ export default {
       type: String,
       required: false,
       default: ''
-    }
-  },
-
-  data () {
-    return {
-      data
     }
   },
 

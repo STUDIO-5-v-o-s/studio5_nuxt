@@ -1,3 +1,5 @@
+import i18n from './config/i18n'
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -61,8 +63,39 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    'nuxt-i18n'
   ],
+
+  i18n: {
+    strategy: 'prefix',
+    seo: true,
+    defaultLocale: 'cs',
+    fallbackLocale: ['cs', 'sk'],
+    // vueI18nLoader: true,
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      onlyOnRoot: true
+    },
+    locales: [
+      {
+        code: 'cs',
+        iso: 'cs-CZ',
+        name: 'Česky',
+        file: 'cs.json'
+      },
+      {
+        code: 'sk',
+        iso: 'sk-SK',
+        name: 'Slovensky',
+        file: 'sk.json'
+      }
+    ],
+    lazy: true,
+    langDir: 'locales/',
+    vueI18n: i18n
+  },
 
   bootstrapVue: {
     icons: true

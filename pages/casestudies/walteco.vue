@@ -1,6 +1,9 @@
 <template>
   <div class="caseStudies">
-    <HeroCaseStudieDetail :title="data.client" :image="data.headerImage" />
+    <HeroCaseStudieDetail
+      :title="$t('global.caseStudies.walteco.client')"
+      :image="$t('global.caseStudies.walteco.headerImage')"
+    />
 
     <b-container class="caseStudies__content overflow-auto">
       <b-row
@@ -8,10 +11,10 @@
       >
         <b-col>
           <h1>
-            {{ data.title }}
+            {{ $t('global.caseStudies.walteco.title') }}
           </h1>
           <h2>
-            {{ data.subtitle }}
+            {{ $t('global.caseStudies.walteco.subtitle') }}
           </h2>
         </b-col>
       </b-row>
@@ -20,17 +23,9 @@
 </template>
 
 <script>
-import data from '@/content/caseStudies/walteco.json'
-
 export default {
   components: {
     HeroCaseStudieDetail: () => import('~/components/hero/HeroCaseStudieDetail')
-  },
-
-  data () {
-    return {
-      data
-    }
   }
 }
 </script>

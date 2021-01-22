@@ -2,18 +2,28 @@
   <div class="noPage">
     <div>
       <h1>
-        {{ data.error.title }}
+        {{ $t('global.error.title') }}
       </h1>
+
       <div class="noPage__background" />
 
       <div class="noPage__content">
         <h3>
-          {{ data.error.subtitle }}
+          {{ $t('global.error.subtitle') }}
         </h3>
 
         <div class="noPage__content--action">
-          <CustomButton :title="data.error.goBack" secondary onclick="history.back(-1)" />
-          <CustomButton :title="data.error.goHome" href="/" class="mt-1 mt-md-0" />
+          <CustomButton
+            :title="$t('global.error.goBack')"
+            secondary
+            onclick="history.back(-1)"
+          />
+
+          <CustomButton
+            :title="$t('global.error.goHome')"
+            :href="localePath('/')"
+            class="mt-1 mt-md-0"
+          />
         </div>
       </div>
     </div>
@@ -21,14 +31,7 @@
 </template>
 
 <script>
-import data from '@/content/cs.json'
-
 export default {
-  data () {
-    return {
-      data
-    }
-  }
 }
 </script>
 

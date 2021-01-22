@@ -13,17 +13,9 @@
 </template>
 
 <script>
-import data from '~/content/cs.json'
-
 export default {
   components: {
     Navbar: () => import('~/components/header/Navbar')
-  },
-
-  data () {
-    return {
-      data
-    }
   },
 
   mounted () {
@@ -71,5 +63,9 @@ export default {
 
 .resize {
   padding: .75rem 3rem;
+
+  @include media-breakpoint-down(sm) {
+    padding: .75rem 1rem;
+  }
 }
 </style>

@@ -32,19 +32,19 @@
       >
         <div class="d-flex align-items-center flex-column">
           <h1>
-            {{ data.hero.title }}
+            {{ $t('global.hero.title') }}
           </h1>
           <p>
-            {{ data.hero.description }}
+            {{ $t('global.hero.description') }}
           </p>
           <div class="hero__actions d-flex align-items-center flex-md-row flex-column">
             <CustomButton
-              :title="data.hero.button_1"
-              href="/portfolio"
+              :title="$t('global.hero.button_1')"
+              :href="localePath('global')"
             />
             <CustomButton
-              :title="data.hero.button_2"
-              href="/casestudies"
+              :title="$t('global.hero.button_2')"
+              :href="localePath('/casestudies')"
               icon="cinema"
               class="ml-1"
               light
@@ -57,16 +57,9 @@
 </template>
 
 <script>
-import data from '~/content/cs.json'
 
 export default {
   components: {
-  },
-
-  data () {
-    return {
-      data
-    }
   }
 }
 </script>

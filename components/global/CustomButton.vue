@@ -122,7 +122,7 @@ export default {
   cursor: pointer;
   transition: all 300ms ease-in-out;
 
-  @include border-radius (.25rem);
+  @include border-radius (.5rem);
 
   &:hover {
     background: $secondary;
