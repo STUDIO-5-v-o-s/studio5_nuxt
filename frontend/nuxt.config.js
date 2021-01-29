@@ -64,8 +64,14 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     '@nuxtjs/style-resources',
-    'nuxt-i18n'
+    'nuxt-i18n',
+    '@nuxtjs/strapi'
   ],
+
+  strapi: {
+    entities: ['restaurants', 'categories'],
+    url: 'http://localhost:1337'
+  },
 
   i18n: {
     strategy: 'prefix',
