@@ -43,8 +43,7 @@ export default {
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     '~plugins/GlobalComponents',
-    '~plugins/bootstrap-vue',
-    '~plugins/v-scroll-lock'
+    '~plugins/bootstrap-vue'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -70,7 +69,7 @@ export default {
   ],
 
   strapi: {
-    entities: ['Homepage-heroes'],
+    entities: ['hero'],
     url: 'http://localhost:1337'
   },
 
