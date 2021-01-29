@@ -32,10 +32,10 @@
       >
         <div class="d-flex align-items-center flex-column">
           <h1>
-            {{ $t('global.hero.title') }}
+            {{ hero.title }}
           </h1>
           <p>
-            {{ $t('global.hero.description') }}
+            {{ hero.description }}
           </p>
           <div class="hero__actions d-flex align-items-center flex-md-row flex-column">
             <CustomButton
@@ -57,9 +57,24 @@
 </template>
 
 <script>
+import axios from 'axios'
 
 export default {
   components: {
+  },
+  data () {
+    return {
+      hero: [],
+      error: null
+    }
+  },
+  async mounted () {
+    try {
+      const response = await axios.get('http://localhost:1337/hero')
+      this.hero = response.data
+    } catch (error) {
+      this.error = error
+    }
   }
 }
 </script>

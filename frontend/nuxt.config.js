@@ -69,7 +69,7 @@ export default {
   ],
 
   strapi: {
-    entities: ['restaurants', 'categories'],
+    entities: ['Homepage-heroes'],
     url: 'http://localhost:1337'
   },
 
