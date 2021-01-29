@@ -4,6 +4,7 @@
       id="scroll"
       fluid
       class="header-scroll d-flex justify-content-center is-fixed-top"
+      :class="{ 'header__hidden': !showNavbar }"
     >
       <b-col>
         <Navbar />
@@ -18,7 +19,16 @@ export default {
     Navbar: () => import('~/components/header/Navbar')
   },
 
+  data () {
+    return {
+      showNavbar: true,
+      lastScrollPosition: 0
+    }
+  },
+
   mounted () {
+    window.addEventListener('scroll', this.onScroll)
+
     this.$nextTick(function () {
       window.addEventListener('scroll', function () {
         const navbar = document.getElementById('scroll')
@@ -32,6 +42,39 @@ export default {
         }
       })
     })
+  },
+
+  beforeDestroy () {
+    window.removeEventListener('scroll', this.onScroll)
+  },
+
+  methods: {
+    onScroll () {
+      // Get the current scroll position
+      const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+      // Because of momentum scrolling on mobiles, we shouldn't continue if it is less than zero
+      if (currentScrollPosition < 0) {
+        return
+      }
+      // Here we determine whether we need to show or hide the navbar
+      this.showNavbar = currentScrollPosition < this.lastScrollPosition
+      // Set the current scroll position as the last scroll position
+      this.lastScrollPosition = currentScrollPosition
+    }
+  },
+
+  onScroll () {
+    const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+    if (currentScrollPosition < 0) {
+      return
+    }
+    // Stop executing this function if the difference between
+    // current scroll position and last scroll position is less than some offset
+    if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
+      return
+    }
+    this.showNavbar = currentScrollPosition < this.lastScrollPosition
+    this.lastScrollPosition = currentScrollPosition
   }
 }
 </script>
@@ -39,6 +82,14 @@ export default {
 <style lang="scss" scoped>
 .header {
   height: 5.5rem;
+
+  @include media-breakpoint-down(sm) {
+    overflow: hidden;
+  }
+
+  &__hidden {
+    transform: translate3d(0, -100%, 0);
+  }
 }
 
 .header-scroll {
@@ -58,6 +109,7 @@ export default {
 
   @include media-breakpoint-down(sm) {
     padding: 1rem 1rem;
+    overflow: hidden;
   }
 }
 
