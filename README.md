@@ -1,6 +1,7 @@
-# STUDIO 5 - Nuxt.js frontend
+# STUDIO 5 - Nuxt.js frontend + Strapi
 
-## Build and run serve
+## Frontend
+### Build and run serve
 
 ```bash
 # install dependencies
@@ -16,7 +17,7 @@ $ npm run start
 # generate static project
 $ npm run generate
 ```    
-## Hierarchy assets
+### Hierarchy assets
 
 - `assets`
   - default .scss files, fonts and images
@@ -43,7 +44,7 @@ $ npm run generate
     - `placeholders` - some size and color variations of placeholders
   - `favicon.ico` - website favicon for browsers
 
-## Nuxt.js
+### Nuxt.js
 
 Nuxt.js is a framework for creating Vue.js applications, which supports SSR. For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
 ```bash
@@ -52,7 +53,7 @@ https://nuxtjs.org/guide/installation
 https://github.com/nuxt/nuxt.js
 ```
 
-## Vue
+### Vue
 
 Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. For detailed explanation on how things work, checkout [Vue.js docs](https://vuejs.org/v2/guide/).
 ```bash
@@ -61,7 +62,7 @@ https://vuejs.org/v2/guide/
 https://github.com/vuejs/vue
 ```
 
-## BootstrapVue
+### BootstrapVue
 
 With BootstrapVue you can build responsive, mobile-first, and ARIA accessible projects on the web using Vue.js and the world's most popular front-end CSS library. [BootstrapVue docs](https://bootstrap-vue.js.org/docs/)
 ```bash
@@ -72,3 +73,13 @@ https://github.com/bootstrap-vue/bootstrap-vue
 
 ### Sass
 Saas includes various features such as variables, nested rules, mixins, inline imports, built-in functions to manipulate color and other values, all with a fully CSS-compatible syntax. [Sass docs](http://sass-lang.com)
+
+## Backend
+
+### Strapi application
+
+A quick description of your strapi application
+```bash
+# documentation
+https://strapi.io/documentation/developer-docs/latest/getting-started/introduction.html
+``` 
