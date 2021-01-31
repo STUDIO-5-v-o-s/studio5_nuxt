@@ -32,10 +32,10 @@
       >
         <div class="d-flex align-items-center flex-column">
           <h1>
-            {{ hero.title }}
+            {{ $t('global.hero.title') }}
           </h1>
           <p>
-            {{ hero.description }}
+            {{ $t('global.hero.description') }}
           </p>
           <div class="hero__actions d-flex align-items-center flex-md-row flex-column">
             <CustomButton

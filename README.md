@@ -1,6 +1,8 @@
 # STUDIO 5 - Nuxt.js frontend + Strapi
 
 ## Frontend
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f2af165d-01f1-4ec8-b8e4-71a7b2b6497b/deploy-status)](https://app.netlify.com/sites/studio5vos/deploys)
+
 ### Build and run serve
 
 ```bash
