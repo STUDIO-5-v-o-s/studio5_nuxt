@@ -99,7 +99,11 @@ export default {
   }
 
   ul {
-    padding: 1rem 0;
+    padding: 1rem 3rem 1rem 0;
+
+    @include media-breakpoint-down(sm) {
+      padding: 1rem 0;
+    }
 
     li {
       list-style: none;
