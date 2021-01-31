@@ -8,6 +8,7 @@
       <div class="custom-input__textarea" :class="classes">
         <b-form-textarea
           :id="name"
+          :name="name"
           :type="name"
           :placeholder="placeholder"
           :rows="rows"
