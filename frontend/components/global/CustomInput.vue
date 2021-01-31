@@ -125,6 +125,7 @@ export default {
     @include shadow (.1);
 
     input {
+      width: 100%;
       height: 2rem;
       line-height: 2rem;
       white-space: nowrap;

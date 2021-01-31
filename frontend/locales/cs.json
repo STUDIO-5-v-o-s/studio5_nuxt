@@ -20,7 +20,7 @@
         },
         {
           "id": 4,
-          "href": "global",
+          "href": "contact",
           "title": "Kontakt"
         }
       ],
@@ -87,5 +87,8 @@
     "copyrightMessage": "Copyright: All Rights Reserved { name }",
     "apple": "žádné jablka | jedno jablko | {count} jablek",
     "banana": "žádné banány | {n} banán | {n} banánů"
+  },
+  "contact": {
+    "title": "Napište nám, nebo si domluvte nezávaznou schůzku"
   }
 }
