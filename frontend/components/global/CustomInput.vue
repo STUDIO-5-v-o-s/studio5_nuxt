@@ -110,8 +110,9 @@ export default {
   &__label {
     display: block;
     text-align: left;
-    font-size: 1rem;
-    margin-left: 1rem;
+    font-size: .9rem;
+    font-weight: 300;
+    margin-left: .75rem;
   }
 
   &__input {
@@ -125,6 +126,7 @@ export default {
     @include shadow (.1);
 
     input {
+      width: 100%;
       height: 2rem;
       line-height: 2rem;
       white-space: nowrap;
@@ -181,7 +183,7 @@ export default {
       white-space: nowrap;
       font-size: 1rem;
       color: #495057;
-      padding: 0 1.25rem;
+      padding: 1rem 1.25rem;
       border: 0;
       background: transparent;
     }

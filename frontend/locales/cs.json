@@ -20,7 +20,7 @@
         },
         {
           "id": 4,
-          "href": "global",
+          "href": "contact",
           "title": "Kontakt"
         }
       ],
@@ -87,5 +87,51 @@
     "copyrightMessage": "Copyright: All Rights Reserved { name }",
     "apple": "žádné jablka | jedno jablko | {count} jablek",
     "banana": "žádné banány | {n} banán | {n} banánů"
+  },
+  "contact": {
+    "title": "Napište nám, nebo si domluvte nezávaznou schůzku",
+    "titleAddress": "Sídlo společnosti",
+    "titleContact": "Kontakty",
+    "address": [
+      {
+        "id": 1,
+        "title": "STUDIO 5, v.o.s."
+      },
+      {
+        "id": 2,
+        "title": "Sokolovská 418, Uherské Hradiště, 68601"
+      },
+      {
+        "id": 3,
+        "title": "IČO: 63493365"
+      },
+      {
+        "id": 4,
+        "title": "DIČ: CZ63493365"
+      },
+      {
+        "id": 5,
+        "title": "Společnost je zapsána v Obchodním rejstříku – Krajský soud Brno, oddíl A, vložka 7242"
+      }
+    ],
+    "contact": [
+      {
+        "id": 1,
+        "title": "+(420) 572-554-247"
+      },
+      {
+        "id": 2,
+        "title": "+(420) 572-554-248"
+      },
+      {
+        "id": 3,
+        "title": "s5@s5.cz"
+      }
+    ],
+    "name": "Vaše jméno",
+    "email": "Emailová adresa",
+    "message": "Zpráva",
+    "send": "Odeslat",
+    "success": "Děkujeme za vaši zprávu"
   }
 }
