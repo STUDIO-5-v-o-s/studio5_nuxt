@@ -5,8 +5,7 @@
   >
     <img
       ref="image"
-      :src="image1x"
-      :srcset="`${image1x} 1x, ${image2x} 2x`"
+      :src="image"
       :alt="image"
     >
 

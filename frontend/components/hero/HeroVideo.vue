@@ -32,10 +32,10 @@
       >
         <div class="d-flex align-items-center flex-column">
           <h1>
-            {{ $t('global.hero.title') }}
+            {{ hero.acf.title }}
           </h1>
           <p>
-            {{ $t('global.hero.description') }}
+            {{ hero.acf.description }}
           </p>
           <div class="hero__actions d-flex align-items-center flex-md-row flex-column">
             <CustomButton
@@ -57,23 +57,17 @@
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
   components: {
   },
+  async fetch () {
+    this.hero = await fetch(
+      'http://studio5api.local/wp-json/acf/v3/pages/2'
+    ).then(res => res.json())
+  },
   data () {
     return {
-      hero: [],
-      error: null
-    }
-  },
-  async mounted () {
-    try {
-      const response = await axios.get('http://localhost:1337/hero')
-      this.hero = response.data
-    } catch (error) {
-      this.error = error
+      hero: []
     }
   }
 }

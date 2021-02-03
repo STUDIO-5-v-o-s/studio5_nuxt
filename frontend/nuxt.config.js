@@ -69,7 +69,7 @@ export default {
   ],
 
   strapi: {
-    entities: ['hero'],
+    entities: ['hero, studie'],
     url: 'http://localhost:1337'
   },
 
