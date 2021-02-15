@@ -15,7 +15,7 @@
         <div id="prev" class="button" />
         -->
         <div id="slides">
-          <div class="slide" style="background-image: url('~assets/images/presentation/website/website_walteco.jpg');">
+          <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1613316122132-81de453d8610?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');">
             <div class="number">
               01
             </div>
