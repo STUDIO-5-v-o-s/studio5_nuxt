@@ -13,7 +13,7 @@
         </div>
 
         <p>
-          {{ description }}
+          {{ description }}...
         </p>
 
         <div class="caseItem__content--button">
@@ -88,10 +88,10 @@ export default {
 
   computed: {
     image1x () {
-      return require(`~/assets/images/fakeapi/${this.image}.jpg`)
+      return require(`~/assets/images/presentation/${this.image}.jpg`)
     },
     image2x () {
-      return require(`~/assets/images/fakeapi/${this.image}@2x.jpg`)
+      return require(`~/assets/images/presentation/${this.image}.jpg`)
     }
   }
 }

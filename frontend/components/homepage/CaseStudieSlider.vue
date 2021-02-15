@@ -9,9 +9,13 @@
         </div>
 
         <div id="slides">
-          <div v-for="item in $t('global.caseStudies.items')" :key="item.id" class="d-inline-flex">
+          <div v-for="item in data.caseStudies.items" :key="item.id" class="d-inline-flex">
             <div class="slide">
-              <img :src="require(`~/assets/images/presentation/${item.preview}`)">
+              <img
+                ref="image"
+                :src="require(`~/assets/images/presentation/${item.preview}.jpg`)"
+                :alt="item.title"
+              >
 
               <div class="number">
                 {{ item.id }}
@@ -42,7 +46,15 @@
 </template>
 
 <script>
+import data from '~/locales/cs/caseStudie.json'
+
 export default {
+
+  data () {
+    return {
+      data
+    }
+  },
   mounted () {
     this.functionCase()
   },
