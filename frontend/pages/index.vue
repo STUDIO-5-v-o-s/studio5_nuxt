@@ -2,6 +2,8 @@
   <div class="home">
     <Hero />
 
+    <CaseStudieSlider />
+
     <div>
       <p>{{ $tc('global.apple', 10, { count: 10 }) }}</p>
       <p>{{ $tc('global.apple', 10) }}</p>
@@ -40,7 +42,8 @@
 <script>
 export default {
   components: {
-    Hero: () => import('~/components/hero/HeroVideo')
+    Hero: () => import('~/components/hero/HeroVideo'),
+    CaseStudieSlider: () => import('~/components/homepage/CaseStudieSlider')
   },
 
   data () {

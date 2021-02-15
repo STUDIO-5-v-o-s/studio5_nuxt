@@ -45,6 +45,7 @@
       }
     },
     "caseStudies": {
+      "title": "Případové studie",
       "items": [
         {
           "id": 1,
