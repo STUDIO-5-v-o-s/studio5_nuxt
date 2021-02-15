@@ -19,6 +19,22 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+
+  @include media-breakpoint-up(lg) {
+    --slides-per-page: 8;
+  }
+
+  @include media-breakpoint-down(lg) {
+    --slides-per-page: 8;
+  }
+
+  @include media-breakpoint-down(md) {
+    --slides-per-page: 6;
+  }
+
+  @include media-breakpoint-down(sm) {
+    --slides-per-page: 1;
+  }
 }
 
 img,

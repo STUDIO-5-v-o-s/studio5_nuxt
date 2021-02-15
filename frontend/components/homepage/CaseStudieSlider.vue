@@ -1,164 +1,34 @@
 <template>
-  <div class="case">
-    <h1 class="case__title d-flex justify-content-center pb-5">
-      {{ $t('global.caseStudies.title') }}
-    </h1>
-
-    <div id="next" class="button" />
-
-    <div id="prev" class="button" />
-
+  <div class="case py-5">
     <div id="hero-slides">
       <div id="slides-cont">
-        <!--
-        <div id="next" class="button" />
-        <div id="prev" class="button" />
-        -->
+        <div class="d-none d-md-block">
+          <div id="next" class="button" />
+
+          <div id="prev" class="button" />
+        </div>
+
         <div id="slides">
-          <div class="slide">
-            <img src="~assets/images/presentation/website/website_amarost.jpg">
+          <div v-for="item in $t('global.caseStudies.items')" :key="item.id" class="d-inline-flex">
+            <div class="slide">
+              <img :src="require(`~/assets/images/presentation/${item.preview}`)">
 
-            <div class="number">
-              01
-            </div>
-            <div class="body">
-              <div class="location">
-                Amarost
+              <div class="number">
+                {{ item.id }}
               </div>
-              <div class="headline">
-                Webový e-shop na míru
-              </div>
-              <a href="https://unsplash.com/photos/EYmhcdGuYmI" target="_blank">
-                <div class="link">
-                  Zobrazit studii
+              <div class="body">
+                <div class="location">
+                  {{ item.client }}
                 </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="slide">
-            <img src="~assets/images/presentation/design/catalogue_zamecke-vino_01.jpg">
-
-            <div class="number">
-              02
-            </div>
-            <div class="body">
-              <div class="location">
-                Arcibiskupské zámecké víno
-              </div>
-              <div class="headline">
-                Katalog vín
-              </div>
-              <a href="https://unsplash.com/photos/ANJHXftvvJ8" target="_blank">
-                <div class="link">
-                  Zobrazit studii
+                <div class="headline">
+                  {{ item.title }}
                 </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="slide">
-            <img src="~assets/images/presentation/website/website_walteco.jpg">
-
-            <div class="number">
-              03
-            </div>
-            <div class="body">
-              <div class="location">
-                Incheon, South Korea
+                <a href="https://unsplash.com/photos/EYmhcdGuYmI" target="_blank">
+                  <div class="link">
+                    Zobrazit studii
+                  </div>
+                </a>
               </div>
-              <div class="headline">
-                Photo by Steve Roe
-              </div>
-              <a href="https://unsplash.com/photos/73aocAAt7rs" target="_blank">
-                <div class="link">
-                  View on Unsplash
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="slide">
-            <img src="~assets/images/presentation/design/lr_airlines_flyer_02_nahled.jpg">
-
-            <div class="number">
-              04
-            </div>
-            <div class="body">
-              <div class="location">
-                Wan Chai, Hong Kong
-              </div>
-              <div class="headline">
-                Photo by Sean Foley
-              </div>
-              <a href="https://unsplash.com/photos/aPDCEoW7B78" target="_blank">
-                <div class="link">
-                  View on Unsplash
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="slide">
-            <img src="~assets/images/presentation/design/EuroNaradi_katalog_MG_5622.jpg">
-
-            <div class="number">
-              05
-            </div>
-            <div class="body">
-              <div class="location">
-                Shibuya-ku, Japan
-              </div>
-              <div class="headline">
-                Photo by Alex Knight
-              </div>
-              <a href="https://unsplash.com/photos/Akz00I_GGjU" target="_blank">
-                <div class="link">
-                  View on Unsplash
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="slide">
-            <img src="~assets/images/presentation/design/vizitka_mockup_yummy_lamy.jpg">
-
-            <div class="number">
-              06
-            </div>
-            <div class="body">
-              <div class="location">
-                Tokyo, Japan
-              </div>
-              <div class="headline">
-                Photo by Benjamin Hung
-              </div>
-              <a href="https://unsplash.com/photos/pTn26knnKVw" target="_blank">
-                <div class="link">
-                  View on Unsplash
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="slide">
-            <img src="~assets/images/presentation/website/website_czechhelicopterteam.jpg">
-
-            <div class="number">
-              07
-            </div>
-            <div class="body">
-              <div class="location">
-                Taipei City, Taiwan
-              </div>
-              <div class="headline">
-                Photo by Jesus In Taiwan
-              </div>
-              <a href="https://unsplash.com/photos/v63B_MUiFw8" target="_blank">
-                <div class="link">
-                  View on Unsplash
-                </div>
-              </a>
             </div>
           </div>
         </div>
@@ -172,15 +42,7 @@
 </template>
 
 <script>
-import StudieItem01 from 'assets/images/presentation/website/website_walteco.jpg'
-
 export default {
-  data () {
-    return {
-      image: { backgroundImage: `url(${StudieItem01})` }
-    }
-  },
-
   mounted () {
     this.functionCase()
   },
@@ -194,7 +56,7 @@ export default {
       let prev = [ 'prev', 'prev-catch' ].map(n => document.getElementById(n));
       let slideCount = slides.children.length;
       let currentPage = 0;
-      let slidesPerPage = () => window.innerWidth > 1700 ? 4 : window.innerWidth > 1200 ? 3 : 2;
+      let slidesPerPage = () => window.innerWidth > 1700 ? 4 : window.innerWidth > 1200 ? 3 : 1;
       let maxPageCount = () => slideCount / slidesPerPage();
       function goToPage(pageNumber = 0) {
         currentPage = Math.min(maxPageCount(), Math.max(0, pageNumber));
@@ -215,17 +77,6 @@ export default {
 <style lang="scss" scoped>
 $curve: cubic-bezier(.7, 0, .3, 1);
 
-.case {
-  padding: 3rem 0;
-
-  &__title {
-    font-weight: 800;
-    font-size: 2rem;
-    line-height: 3rem;
-    color: $primary;
-  }
-}
-
 #hero-slides {
   --page: 0;
 
@@ -242,10 +93,12 @@ $curve: cubic-bezier(.7, 0, .3, 1);
     .button {
       width: var(--button-height);
       height: var(--button-height);
+      color: #fff;
       background: $primary;
       position: absolute;
-      top: 0;
-      z-index: 0;
+      left: 4rem;
+      top: 12rem;
+      z-index: 50;
       cursor: pointer;
 
       @include border-radius ($spacer);
@@ -304,7 +157,7 @@ $curve: cubic-bezier(.7, 0, .3, 1);
 
     #prev {
       margin-top: var(--button-spacing);
-      opacity: calc(var(--page) + .5);
+      opacity: calc(var(--page) + .2);
       transition: 500ms opacity;
 
       &::before,
@@ -356,10 +209,10 @@ $curve: cubic-bezier(.7, 0, .3, 1);
     transition: 1500ms transform $curve;
 
     @include media-breakpoint-down(sm) {
-      --slides-height: 20rem;
+      --slides-height: 18rem;
 
       left: -2rem;
-      transform: translate3d(calc(var(--page) * -15rem), 0, 0);
+      transform: translate3d(calc(var(--page) * -30rem), 0, 0);
     }
 
     .slide {
@@ -376,7 +229,11 @@ $curve: cubic-bezier(.7, 0, .3, 1);
 
       &:nth-child(odd),
       &:nth-child(even) {
-        transform: translateX(20%);
+        transform: translateX(35%);
+
+        @include media-breakpoint-down(sm) {
+          transform: translateX(20%);
+        }
       }
 
       @include border-radius ($spacer);
