@@ -27,7 +27,7 @@
                 <div class="headline">
                   {{ item.title }}
                 </div>
-                <a href="https://unsplash.com/photos/EYmhcdGuYmI" target="_blank">
+                <a :href="localePath(item.href)">
                   <div class="link">
                     Zobrazit studii
                   </div>
