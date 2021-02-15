@@ -80,8 +80,15 @@ $curve: cubic-bezier(.7, 0, .3, 1);
 #hero-slides {
   --page: 0;
 
-  height: 25rem;
+  height: 30rem;
+  padding: 1.5rem 0;
   width: 100%;
+  overflow: hidden;
+
+  @include media-breakpoint-down(sm) {
+    height: 22rem;
+    padding: 1.5rem 0;
+  }
 
   #slides-cont {
     padding: 0;
