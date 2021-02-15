@@ -1,0 +1,75 @@
+{
+  "caseStudies": {
+    "items": [
+      {
+        "id": 1,
+        "href": "/casestudies/walteco",
+        "title": "Korporátní webové stránky",
+        "client": "Walteco s.r.o.",
+        "designer": "Patrik Vaďura",
+        "date": "2020",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Curabitur sagittis hendrerit ante. Nullam eget nisl. Aenean fermentum risus id tortor. Fusce wisi. Pellentesque pretium lectus id turpis. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Fusce consectetuer risus a nunc. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Maecenas libero. Proin in tellus sit amet nibh dignissim sagittis.\n\nQuis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Duis viverra diam non justo. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Duis pulvinar. In rutrum. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Integer lacinia. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. In dapibus augue non sapien. Donec iaculis gravida nulla. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Nam quis nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Vivamus luctus egestas leo. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus.",
+        "preview": "website/website_walteco",
+        "image01": "website/website_waltecoeshop",
+        "image02": "website/website_walteco",
+        "HeroImage": "website/website_walteco"
+      },
+      {
+        "id": 2,
+        "href": "/casestudies",
+        "title": "Branding a reklamní tiskoviny",
+        "client": "Euronářadí s.r.o.",
+        "designer": "Pavel Tománek",
+        "date": "2018",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sagittis hendrerit ante. Duis pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "preview": "design/EuroNaradi_katalog_MG_5622",
+        "image": "fakeApi_1"
+      },
+      {
+        "id": 3,
+        "href": "/casestudies",
+        "title": "Flayer letecké společnosti",
+        "client": "LR Airlines",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sagittis hendrerit ante. Duis pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "preview": "design/lr_airlines_flyer_02_nahled",
+        "image": "fakeApi_1"
+      },
+      {
+        "id": 4,
+        "href": "/casestudies",
+        "title": "Firemní identita",
+        "client": "OSPEK",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sagittis hendrerit ante. Duis pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "preview": "design/OSPEK branding 1",
+        "image": "fakeApi_1"
+      },
+      {
+        "id": 5,
+        "href": "/casestudies",
+        "title": "Logo a webové stránky",
+        "client": "Czech Helicopter Team",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sagittis hendrerit ante. Duis pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "preview": "website/website_czechhelicopterteam",
+        "image": "fakeApi_1"
+      },
+      {
+        "id": 6,
+        "href": "/casestudies",
+        "title": "Branding a merkantilie",
+        "client": "Yummy Lamy",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sagittis hendrerit ante. Duis pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "preview": "design/vizitka_mockup_yummy_lamy",
+        "image": "fakeApi_1"
+      },
+      {
+        "id": 7,
+        "href": "/casestudies",
+        "title": "Webové stránky na míru",
+        "client": "UH CAR",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sagittis hendrerit ante. Duis pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+        "preview": "website/website_uhcar",
+        "image": "fakeApi_1"
+      }
+    ]
+  }
+}

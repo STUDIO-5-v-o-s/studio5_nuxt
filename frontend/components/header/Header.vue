@@ -81,6 +81,7 @@ export default {
 
 <style lang="scss" scoped>
 .header {
+  width: 100vw;
   height: 5.5rem;
 
   @include media-breakpoint-down(sm) {

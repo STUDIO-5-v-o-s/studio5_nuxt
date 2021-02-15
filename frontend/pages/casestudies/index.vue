@@ -4,10 +4,10 @@
 
     <b-container class="caseStudies__content overflow-auto">
       <b-row
-        v-for="item in $t('global.caseStudies.items')"
+        v-for="item in data.caseStudies.items"
         id="case"
         :key="item.id"
-        :items="item in $t('global.caseStudies.items')"
+        :items="item in data.caseStudies.items"
         :per-page="perPage"
         :current-page="currentPage"
         cols="1"
@@ -17,8 +17,8 @@
           <CaseItem
             :title="item.title"
             :client="item.client"
-            :description="item.description"
-            :image="item.image"
+            :description="item.description.substring(0,200)"
+            :image="item.preview"
             :href="localePath(item.href)"
           />
         </b-col>
@@ -39,6 +39,8 @@
 </template>
 
 <script>
+import data from '~/locales/cs/caseStudie.json'
+
 export default {
   components: {
     HeroCaseStudie: () => import('~/components/hero/HeroCaseStudie'),
@@ -47,6 +49,7 @@ export default {
 
   data () {
     return {
+      data,
       perPage: 2,
       currentPage: 1,
       title: 'Případové studie | STUDIO 5'
@@ -55,7 +58,7 @@ export default {
 
   computed: {
     rows () {
-      return this.$t('global.caseStudies.items').length
+      return this.data.caseStudies.items.length
     }
   },
 

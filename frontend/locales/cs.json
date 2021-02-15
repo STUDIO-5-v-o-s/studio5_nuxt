@@ -44,40 +44,11 @@
         "DontFind": "Nenašli jste co ste hledali?"
       }
     },
-    "caseStudies": {
+    "caseStudie": {
       "title": "Případové studie",
-      "items": [
-        {
-          "id": 1,
-          "href": "/casestudies/walteco",
-          "title": "Firemní identita",
-          "client": "Walteco s.r.o.",
-          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sagittis hendrerit ante. Duis pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-          "image": "fakeApi"
-        },
-        {
-          "id": 2,
-          "href": "/casestudies",
-          "title": "Branding a reklamní tiskoviny",
-          "client": "Euronářadí s.r.o.",
-          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sagittis hendrerit ante. Duis pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-          "image": "fakeApi_1"
-        },
-        {
-          "id": 3,
-          "href": "/casestudies",
-          "title": "Branding a reklamní tiskoviny",
-          "client": "Euronářadí s.r.o.",
-          "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur sagittis hendrerit ante. Duis pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-          "image": "fakeApi_1"
-        }
-      ],
-      "walteco": {
-        "client": "Walteco",
-        "title": "Firemní identita",
-        "subtitle": "Subtitle",
-        "headerImage": "fakeApi"
-      }
+      "client": "Klient",
+      "designed": "Tenhle projekt zpracoval",
+      "date": "Datum dokončení"
     },
     "error": {
       "title": "404",
