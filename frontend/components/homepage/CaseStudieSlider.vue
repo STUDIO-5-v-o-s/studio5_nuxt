@@ -15,45 +15,51 @@
         <div id="prev" class="button" />
         -->
         <div id="slides">
-          <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1613316122132-81de453d8610?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80');">
+          <div class="slide">
+            <img src="~assets/images/presentation/website/website_amarost.jpg">
+
             <div class="number">
               01
             </div>
             <div class="body">
               <div class="location">
-                Shibuya, Japan
+                Amarost
               </div>
               <div class="headline">
-                Photo by Benjamin Hung
+                Webový e-shop na míru
               </div>
               <a href="https://unsplash.com/photos/EYmhcdGuYmI" target="_blank">
                 <div class="link">
-                  View on Unsplash
+                  Zobrazit studii
                 </div>
               </a>
             </div>
           </div>
 
-          <div class="slide" style="background-image: url('~assets/images/presentation/website/website_walteco.jpg');">
+          <div class="slide">
+            <img src="~assets/images/presentation/design/catalogue_zamecke-vino_01.jpg">
+
             <div class="number">
               02
             </div>
             <div class="body">
               <div class="location">
-                Mong Kok, Hong Kong
+                Arcibiskupské zámecké víno
               </div>
               <div class="headline">
-                Photo by Ryan Tang
+                Katalog vín
               </div>
               <a href="https://unsplash.com/photos/ANJHXftvvJ8" target="_blank">
                 <div class="link">
-                  View on Unsplash
+                  Zobrazit studii
                 </div>
               </a>
             </div>
           </div>
 
-          <div class="slide" style="background-image: url('~assets/images/presentation/website/website_walteco.jpg');">
+          <div class="slide">
+            <img src="~assets/images/presentation/website/website_walteco.jpg">
+
             <div class="number">
               03
             </div>
@@ -72,7 +78,9 @@
             </div>
           </div>
 
-          <div class="slide" style="background-image: url('~assets/images/presentation/website/website_walteco.jpg');">
+          <div class="slide">
+            <img src="~assets/images/presentation/design/lr_airlines_flyer_02_nahled.jpg">
+
             <div class="number">
               04
             </div>
@@ -91,7 +99,9 @@
             </div>
           </div>
 
-          <div class="slide" style="background-image: url('~assets/images/presentation/website/website_walteco.jpg');">
+          <div class="slide">
+            <img src="~assets/images/presentation/design/EuroNaradi_katalog_MG_5622.jpg">
+
             <div class="number">
               05
             </div>
@@ -110,7 +120,9 @@
             </div>
           </div>
 
-          <div class="slide" style="background-image: url('~assets/images/presentation/website/website_walteco.jpg');">
+          <div class="slide">
+            <img src="~assets/images/presentation/design/vizitka_mockup_yummy_lamy.jpg">
+
             <div class="number">
               06
             </div>
@@ -129,7 +141,9 @@
             </div>
           </div>
 
-          <div class="slide" style="background-image: url('~assets/images/presentation/website/website_walteco.jpg');">
+          <div class="slide">
+            <img src="~assets/images/presentation/website/website_czechhelicopterteam.jpg">
+
             <div class="number">
               07
             </div>
@@ -158,10 +172,19 @@
 </template>
 
 <script>
+import StudieItem01 from 'assets/images/presentation/website/website_walteco.jpg'
+
 export default {
+  data () {
+    return {
+      image: { backgroundImage: `url(${StudieItem01})` }
+    }
+  },
+
   mounted () {
     this.functionCase()
   },
+
   methods: {
     functionCase () {
       /* eslint-disable */
@@ -346,10 +369,15 @@ $curve: cubic-bezier(.7, 0, .3, 1);
       width: 20rem;
       height: var(--slides-height);
       color: white;
-      background-size: cover;
-      background-position: center;
+      background: $secondary;
       white-space: normal;
       word-break: break-word;
+      object-fit: cover;
+
+      &:nth-child(odd),
+      &:nth-child(even) {
+        transform: translateX(20%);
+      }
 
       @include border-radius ($spacer);
       @include shadow (.75);
@@ -358,16 +386,24 @@ $curve: cubic-bezier(.7, 0, .3, 1);
         width: 15rem;
       }
 
+      img {
+        object-fit: cover;
+
+        @include border-radius ($spacer);
+      }
+
       &::before {
         content: '';
         display: block;
-        background: linear-gradient(180deg, rgba(#000, 0) 0%, rgba(#000, .9) 100%);
-        opacity: 0;
+        background: linear-gradient(180deg, rgba($secondary, 0) 0%, rgba($secondary, 1) 100%);
+        opacity: .5;
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
+
+        @include border-radius ($spacer);
       }
 
       .number {
@@ -435,9 +471,9 @@ $curve: cubic-bezier(.7, 0, .3, 1);
       }
 
       .location {
-        font-size: .7rem;
+        font-size: 1rem;
         font-weight: 100;
-        margin-bottom: 1rem;
+        margin-bottom: .5rem;
         transition-delay: 60ms;
 
         @include media-breakpoint-down(sm) {
