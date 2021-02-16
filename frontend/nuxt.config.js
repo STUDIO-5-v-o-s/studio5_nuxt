@@ -73,6 +73,10 @@ export default {
     url: 'http://localhost:1337'
   },
 
+  storybook: {
+    // Options
+  },
+
   i18n: {
     strategy: 'prefix',
     seo: true,
