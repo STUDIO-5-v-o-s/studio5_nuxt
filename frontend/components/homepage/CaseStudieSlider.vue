@@ -89,6 +89,10 @@ export default {
 <style lang="scss" scoped>
 $curve: cubic-bezier(.7, 0, .3, 1);
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 #hero-slides {
   --page: 0;
 
@@ -100,6 +104,8 @@ $curve: cubic-bezier(.7, 0, .3, 1);
   @include media-breakpoint-down(sm) {
     height: 22rem;
     padding: 1.5rem 0;
+    overflow-y: hidden;
+    overflow-x: scroll;
   }
 
   #slides-cont {
@@ -204,6 +210,7 @@ $curve: cubic-bezier(.7, 0, .3, 1);
 
       @include media-breakpoint-down(sm) {
         width: 10rem;
+        display: none;
       }
     }
 
