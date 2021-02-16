@@ -28,11 +28,6 @@ export default {
       type: String,
       required: true
     },
-    shadow: {
-      type: Boolean,
-      required: false,
-      default: false
-    },
     background: {
       type: Boolean,
       required: false,

@@ -102,6 +102,7 @@ export default {
         'custom-button--wide': this.wide,
         'custom-button': this.primary,
         'custom-button--secondary': this.secondary,
+        'custom-button--disabled': this.disabled,
         'custom-button--light': this.light
       }
     }
@@ -206,6 +207,31 @@ export default {
 
     &:hover {
       background: #fff;
+    }
+  }
+
+  &--disbaled {
+    pointer-events: none;
+    background: rgba(0, 0, 0, .05);
+
+    .custom-button__title {
+      color: rgba(0, 0, 0, .3);
+
+      &:hover {
+        color: rgba(0, 0, 0, .3);
+      }
+    }
+
+    .custom-button__box--title {
+      color: rgba(0, 0, 0, .3);
+
+      &:hover {
+        color: rgba(0, 0, 0, .3);
+      }
+    }
+
+    &:hover {
+      background: rgba(0, 0, 0, .05);
     }
   }
 }
