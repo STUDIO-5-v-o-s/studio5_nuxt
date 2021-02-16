@@ -11,10 +11,13 @@
       />
     </b-navbar-brand>
 
-    <b-navbar-toggle target="nav-collapse" />
+    <b-navbar-toggle v-if="open" id="close" target="nav-collapse" @click="closeMenu" />
+
+    <b-navbar-toggle v-else target="nav-collapse" @click="openMenu" />
 
     <b-collapse
       id="nav-collapse"
+      v-scroll-lock="open"
       is-nav
     >
       <b-navbar-nav class="ml-auto navbar__links">
@@ -55,6 +58,12 @@
 
 <script>
 export default {
+
+  data () {
+    return {
+      open: false
+    }
+  },
   mounted () {
     this.$nextTick(function () {
       window.addEventListener('scroll', function () {
@@ -69,6 +78,15 @@ export default {
         }
       })
     })
+  },
+
+  methods: {
+    openMenu () {
+      this.open = true
+    },
+    closeMenu () {
+      this.open = false
+    }
   }
 }
 </script>
@@ -173,10 +191,6 @@ export default {
         width: 1.25rem;
         background-image: url('~assets/images/icons/white/burger.svg');
         vertical-align: middle;
-
-        &:active {
-          background-image: url('~assets/images/icons/primary/burger.svg');
-        }
       }
     }
   }
@@ -217,5 +231,28 @@ export default {
 
 .lock-scroll {
   overflow: hidden;
+}
+
+#close {
+  ::v-deep .navbar-toggler {
+    padding: 1rem 1.25rem;
+    background: $light;
+    border: none;
+
+    @include border-radius (.5rem);
+
+    &:focus,
+    &:hover {
+      border: none;
+      text-decoration: none;
+    }
+
+    &-icon {
+      display: inline-block;
+      width: 1.25rem;
+      background-image: url('~assets/images/icons/white/cross.svg');
+      vertical-align: middle;
+    }
+  }
 }
 </style>
